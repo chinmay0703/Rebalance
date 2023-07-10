@@ -26,7 +26,6 @@ function App() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            
             <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8">location</Nav.Link>
           </Nav>
         </Navbar.Collapse>

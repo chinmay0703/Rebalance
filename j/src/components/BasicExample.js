@@ -23,38 +23,41 @@ const BasicExample = () => {
   }, []);
 
   return (
-  
-<div className={`scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
-<Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-       Why is Physiotheropy important?
-      </Dropdown.Toggle>
-      <Dropdown.Menu>
-        <h7> Post-surgery rehabilitation, Reduce or eliminate pain, Recover and prevent sports injuries, Pregnancy and post-partum care and Neuro cases rehabilitation.</h7>
-      </Dropdown.Menu>
-      <h3> </h3>
+    <div className={`scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
       <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-       How long does a physiotheropay session last?
-      </Dropdown.Toggle>
-      <Dropdown.Menu>
-        <h7> The initial session that includes history taking, examination and diagnosis usually takes around 45 minutes. Following that the physiotherapy sessions can be around 35-45 minutes.</h7>
-      </Dropdown.Menu>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Why is Physiotherapy important?
+        </Dropdown.Toggle>
+        <Dropdown.Menu className="text-center"> {/* Add text-center class */}
+          <h7 className="middddddd">Post-surgery rehabilitation, Reduce or eliminate pain, Recover and prevent sports injuries, Pregnancy and post-partum care and Neuro cases rehabilitation.</h7>
+        </Dropdown.Menu>
+      </Dropdown>
+
       <h3> </h3>
-      </Dropdown>
+
       <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-       How do I schedule an Appointment?
-      </Dropdown.Toggle>
-      <Dropdown.Menu>
-        <h7> You can Book An Appointment with us by contacting on +917721099005</h7>
-      </Dropdown.Menu>
-      {/* <h3>__________________________________________________________________________________________________________________________________________________________________________________</h3> */}
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          How long does a physiotherapy session last?
+        </Dropdown.Toggle>
+        <Dropdown.Menu className="text-center"> {/* Add text-center class */}
+          <h7 className="middddddd">The initial session that includes history taking, examination and diagnosis usually takes around 45 minutes. Following that, the physiotherapy sessions can be around 35-45 minutes.</h7>
+        </Dropdown.Menu>
       </Dropdown>
-      </Dropdown> 
+
+      <h3> </h3>
+
+      <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          How do I schedule an appointment?
+        </Dropdown.Toggle>
+        <Dropdown.Menu className="text-center"> {/* Add text-center class */}
+          <h7 className="middddddd">You can book an appointment with us by contacting us at +917721099005.</h7>
+        </Dropdown.Menu>
+      </Dropdown>
+
       <br></br>
-     </div>
+    </div>
   );
 };
-export default BasicExample;
 
+export default BasicExample;
