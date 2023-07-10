@@ -775,9 +775,9 @@ body {
 }
 
 .card {
-    position: relative;
+    position: center;
     width: 350px;
-    height: 510px;
+    height: 425px;
     background: #000;
     border-radius: 18px;
     overflow: hidden;
