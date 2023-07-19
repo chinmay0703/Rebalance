@@ -29,7 +29,7 @@ const BasicExample = () => {
           Why is Physiotherapy important?
         </Dropdown.Toggle>
         <Dropdown.Menu className="text-center"> {/* Add text-center class */}
-          <h7 className="middddddd">Post-surgery rehabilitation, Reduce or eliminate pain, Recover and prevent sports injuries, Pregnancy and post-partum care and Neuro cases rehabilitation.</h7>
+          <Dropdown.ItemText className="middddddd">Post-surgery rehabilitation, Reduce or eliminate pain, Recover and prevent sports injuries, Pregnancy and post-partum care and Neuro cases rehabilitation.</Dropdown.ItemText>
         </Dropdown.Menu>
       </Dropdown>
 
@@ -40,7 +40,7 @@ const BasicExample = () => {
           How long does a physiotherapy session last?
         </Dropdown.Toggle>
         <Dropdown.Menu className="text-center"> {/* Add text-center class */}
-          <h7 className="middddddd">The initial session that includes history taking, examination and diagnosis usually takes around 45 minutes. Following that, the physiotherapy sessions can be around 35-45 minutes.</h7>
+          <Dropdown.ItemText className="middddddd">The initial session that includes history taking, examination and diagnosis usually takes around 45 minutes. Following that, the physiotherapy sessions can be around 35-45 minutes.</Dropdown.ItemText>
         </Dropdown.Menu>
       </Dropdown>
 
@@ -51,7 +51,7 @@ const BasicExample = () => {
           How do I schedule an appointment?
         </Dropdown.Toggle>
         <Dropdown.Menu className="text-center"> {/* Add text-center class */}
-          <h7 className="middddddd">You can book an appointment with us by contacting us at +917721099005.</h7>
+          <Dropdown.ItemText className="middddddd">You can book an appointment with us by contacting us at +917721099005.</Dropdown.ItemText>
         </Dropdown.Menu>
       </Dropdown>
 
