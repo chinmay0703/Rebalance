@@ -43,10 +43,9 @@ const Contact = () => {
           </button>
           <h6 className='contact-info'>
             Physical Therapy Clinic in Bangalore,
+           
             <br />
-            Karnataka 560037
-            <br />
-            610 second floor, AECS Layout-C Block
+            610, 2nd floor, AECS Layout - C Block, AECS Layout, Brookefield, Bengaluru, Karnataka 560037
           </h6>
         </div>
         <div className='contact-box'>

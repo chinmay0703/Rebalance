@@ -12,7 +12,6 @@ const Map = () => {
          {/* <center><h5 className='b'></h5></center>  */}
        <center> <h5 className='bu'>CONTACT US</h5></center> 
         <img src={mapp} alt="I" className='res' onClick={handleClick} />
-        <br></br>
       </div>
     );
   };

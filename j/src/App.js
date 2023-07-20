@@ -42,9 +42,9 @@ function App() {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link as={Link} to="/" onClick={scrollToTop}>Home</Nav.Link> {/* Use onClick event to scroll to top */}
-                  <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8">Location</Nav.Link>
-                  <Nav.Link onClick={scrollToContact}>Contact Us</Nav.Link> {/* Use onClick event to scroll to Contact */}
+                  <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> {/* Use onClick event to scroll to top */}
+                  <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
+                  <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link> {/* Use onClick event to scroll to Contact */}
                 </Nav>
               </Navbar.Collapse> 
             </Container>

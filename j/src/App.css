@@ -22,7 +22,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f0f2f7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -51,13 +51,17 @@
     
 
 }
+
 .ret{
 
- color: #282c34;
+ color: #0c0d0d;
  background-color: #a4c7e4;
+ 
 
 }
-
+.navbar-with-shadow .me-auto .nav-link {
+  color: rgb(11, 11, 11); /* Change the link color to green */
+}
 
 /* src/components/ScrollingComponent.css */
 .sticky-header {
