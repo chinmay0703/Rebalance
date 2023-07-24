@@ -962,3 +962,79 @@ body {
   color: #333; /* Update with your desired hover text color */
   /* Add any additional hover styles as needed */
 }
+
+
+/* navbar */
+.App {
+  text-align: center;
+}
+.clinic {
+  background-size: cover;
+  background-position: center;
+  /* Add other styles as needed */
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.your-component {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #f0f2f7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.chiu{
+
+    background: 'lightblue',
+    
+
+}
+
+.ret{
+
+ color: #0c0d0d;
+ background-color: #a4c7e4;
+ 
+
+}
+.navbar-with-shadow .me-auto .nav-link {
+  color: rgb(11, 11, 11); /* Change the link color to green */
+}
+
+/* src/components/ScrollingComponent.css */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  /* Add other styling properties as needed */
+}
+
