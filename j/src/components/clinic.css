@@ -130,15 +130,26 @@ margin-left: 10px;
 }
 
 
-.down{
-
+.down {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   color: #030614;
   margin-top: 10px;
-  
-  
+  font-size: 16px; /* Default font size for smaller screens */
+
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+
+  /* Media query for even larger screens */
+  @media (min-width: 992px) {
+    font-size: 24px;
+  }
+
+  /* Add more media queries for other screen sizes if needed */
 }
+
 .contact-box {
   flex: 1 1 300px;
   margin: 10px;
@@ -606,7 +617,7 @@ body {
   width: 400px; /* Set a fixed width for the images */
   height: 400px; /* Set a fixed height for the images */
   object-fit: cover; /* Maintain aspect ratio and fill the container */
-  /* border-radius: 5px; */
+  border-radius: 5px; /* Add rounded corners */
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Enhance the shadow effect */
   transition: transform 0.3s ease-in-out;
   margin: 0 10px 20px;
@@ -616,13 +627,20 @@ body {
   transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 468px) {
   .ff {
-    align-items: center;
-    position: center;
-    width: 100%;
+    width: 95%; /* Adjust the image width for smaller screens */
+    height: auto; /* Allow the height to adjust based on aspect ratio */
   }
 }
+
+
+
+
+
+
+
+
 /* map */
 .c {
   text-align: center;

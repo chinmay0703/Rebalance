@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
-import { Element, scroller, animateScroll } from 'react-scroll'; // Import from react-scroll
+import {BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import {Element, scroller, animateScroll } from 'react-scroll'; // Import from react-scroll
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -16,26 +16,23 @@ import Map from './components/Map';
 import './App.css';
 import ChatBot from './components/ChatBox';
 import H from './components/H';
-import Scroll from './components/Scroll';
-// import Dryneedling from './components/Dryneedling';
+import Aboutus from './components/Aboutus';
 
 function App() {
   return (
     <Router>
       <div>
-       
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} /> {/* New Route */}
-          <Route path="/gallery" element={<Gallery />} /> {/* New Route */}
+          <Route path="/" element={<Home/>} />
+          <Route path="/contact" element={<Contact/>} /> 
+          <Route path="/gallery" element={<Gallery/>} /> 
+          <Route path="/aboutus" element={<Aboutt></Aboutt>}/> 
         </Routes>
-        <Element name="contact" /> {/* Add Element component with the name "contact" */}
+        <Element name="contact" /> 
       </div>
     </Router>
   );
 }
-
-
 const scrollToContact = () => {
   scroller.scrollTo('contact', {
     duration: 800,
@@ -52,7 +49,6 @@ const scrollToTop = () => {
 const open = () => {
   window.location.assign('/gallery');
 };
-
 function Home() {
   return (
     <div>
@@ -63,9 +59,11 @@ function Home() {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> {/* Use onClick event to scroll to top */}
+                  <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> 
                   <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
-                  <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link> {/* Use onClick event to scroll to Contact */}
+                  <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link> 
+                  <Nav.Link   as={Link} to="/aboutus"><b>About</b></Nav.Link> 
+                  <Nav.Link   as={Link} to="/gallery"><b>Gallery</b></Nav.Link> 
                 </Nav>
               </Navbar.Collapse> 
             </Container>
@@ -74,7 +72,6 @@ function Home() {
       <Bhariheading />
       <br></br>
       <Clinic />
-      {/* <Video></Video> */}
       <ChatBot />
       <Tagline />
       <Advanced />
@@ -91,7 +88,6 @@ function Home() {
     </div>
   );
 }
-
 function Gallery() {
   return (
     <div>
@@ -110,7 +106,6 @@ function Gallery() {
             </Container>
           </Navbar>
         </header>
-       
         <br></br>
         <br></br>
         <Bhariheading />
@@ -124,9 +119,40 @@ function Gallery() {
         <br></br>
       <Contact />
       <ChatBot />
-
-
-      
+      <br></br>
+    </div>
+  );
+}
+function Aboutt() {
+  return (
+    <div>
+       <header className='sticky-header'>   
+       <Navbar className="navbar-with-shadow" bg="light" expand="lg" fixed="top">
+            <Container className='ret'>
+              <Navbar.Brand as={Link} to="/" onClick={scrollToTop}>Rebalance</Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                  <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> {/* Use onClick event to scroll to top */}
+                  <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
+                  <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link> {/* Use onClick event to scroll to Contact */}
+                  <Nav.Link   as={Link} to="/gallery"><b>Gallery</b></Nav.Link>
+                </Nav>
+              </Navbar.Collapse> 
+            </Container>
+          </Navbar>
+        </header>
+        <br></br>
+        <br></br>
+        <br></br>
+        <center><h1>About Us</h1></center>
+   <br></br>
+       <Aboutus ></Aboutus>
+  
+        <br></br>
+        <Map></Map>
+      <Contact />
+      <ChatBot />
       <br></br>
     </div>
   );

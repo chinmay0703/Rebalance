@@ -1,15 +1,12 @@
 import Nav from 'react-bootstrap/Nav';
 import './clinic.css';
 import React, { useRef, useEffect, useState } from 'react';
-
 const Contact = () => {
   const handleCall = () => {
-    window.location.href = 'tel:+917721099005'; // Replace with your phone number
+    window.location.href = 'tel:+917721099005';
   };
-
   const componentRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -20,14 +17,11 @@ const Contact = () => {
         }
       });
     });
-
     observer.observe(componentRef.current);
-
     return () => {
       observer.disconnect();
     };
   }, []);
-
   return (
     <div className={`scrolling-component ${isVisible ? 'visible' : ''}`} ref={componentRef}>
       <div className='contact-section'>
@@ -43,18 +37,18 @@ const Contact = () => {
           </button>
           <h6 className='contact-info'>
             Physical Therapy Clinic in Bangalore,
-           
             <br />
             610, 2nd floor, AECS Layout - C Block, AECS Layout, Brookefield, Bengaluru, Karnataka 560037
           </h6>
         </div>
         <div className='contact-box'>
           <h4 className='contact-title'>Timings</h4>
+          <br></br>
           <h6 className='contact-info'>
             Monday to Saturday
-            <br />
+            <br/>
             Morning - 9:30 to 12:30
-            <br />
+            <br/>
             Evening - 5:30 to 8:30
           </h6>
         </div>
@@ -62,5 +56,6 @@ const Contact = () => {
     </div>
   );
 };
-
 export default Contact;
+
+
