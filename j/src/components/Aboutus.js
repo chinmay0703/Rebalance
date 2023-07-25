@@ -33,7 +33,7 @@ const Aboutus = () => {
           <p>
             I take pride in being able to continuously upgrade my practice to meet the changing demands of healthcare and the Physio profession. Rebalance continuously upgrades too, with the latest equipment and modern gym.
             <br /><br />
-            In my experience, there are 3 things that are very important:
+           <b> In my experience, there are 3 things that are very important:</b>
             <br />
             1. A proper diagnosis: A proper diagnosis is always the key. It’s like a Google map, once we know where to head to, the journey of rehab and recovery is in the proper direction. Else, it’s a vicious cycle of pain and misguided treatment.
             <br />
@@ -41,7 +41,7 @@ const Aboutus = () => {
             <br />
             3. The physio’s care for recovery: Finally, the physio should also understand that the patient is going not only through physical stress but also the emotional stress of an injury and provide proper care for recovery. Factoring this into therapy is key for success!
             <br /><br />
-            My Experience:
+           <b> My Experience:</b>
             <br />
             - Completed Physiotherapy graduation from MUHS, Maharashtra.
             <br />

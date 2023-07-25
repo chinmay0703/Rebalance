@@ -1,6 +1,6 @@
 import React from 'react';
 import './clinic.css'; // Import the CSS file for styling
-import watt from './images/wat.jpg';
+import watt from './images/45.png';
 
 function ChatBot() {
   const recipientNumber = '+917721099005'; // Replace with your desired phone number
