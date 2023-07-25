@@ -15,7 +15,7 @@ import ImageGallery from './components/ImageGallery';
 import Map from './components/Map';
 import './App.css';
 import ChatBot from './components/ChatBox';
-import H from './components/H';
+// import H from './components/H';
 import Aboutus from './components/Aboutus';
 
 function App() {
@@ -79,7 +79,9 @@ function Home() {
       <br></br>
      <center> <div className='btn btn-primary' onClick={open}> Open-gallery</div>
      </center>
-      <H />
+     <br></br>
+     
+      {/* <H /> */}
       <Services />
       <Map />
       <BasicExample />
@@ -148,7 +150,6 @@ function Aboutt() {
         <center><h1>About Us</h1></center>
    <br></br>
        <Aboutus ></Aboutus>
-  
         <br></br>
         <Map></Map>
       <Contact />
