@@ -2,7 +2,7 @@ import React from 'react';
 import './clinic.css';
 import im from './images/black.png'
 
-const H = () => {
+const OfferCard = () => {
   return (
     <div className="wrapper">
       <div className="card">
@@ -67,4 +67,4 @@ const H = () => {
   );
 };
 
-export default H;
+export default OfferCard;

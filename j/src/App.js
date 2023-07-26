@@ -1,13 +1,14 @@
-import React ,{useState}from 'react';
+import React ,{useState,useEffect}from 'react';
 import {BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
-import {Element, scroller, animateScroll } from 'react-scroll'; // Import from react-scroll
+import {Element, scroller, animateScroll } from 'react-scroll';
 import Container from 'react-bootstrap/Container';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import './App.css';
 import Services from './components/Services';
-import BasicExample from './components/BasicExample';
+import DropdawnQuestions from './components/DropdawnQuestions';
 import Advanced from './components/Advanced';
 import Clinic from './components/Clinic';
 import Contact from './components/Contact';
@@ -15,9 +16,7 @@ import Bhariheading from './components/Bhariheading';
 import Tagline from './components/Tagline';
 import ImageGallery from './components/ImageGallery';
 import Map from './components/Map';
-import './App.css';
 import ChatBot from './components/ChatBox';
-// import H from './components/H';
 import Aboutus from './components/Aboutus';
 
 function App() {
@@ -35,28 +34,38 @@ function App() {
     </Router>
   );
 }
-const scrollToContact = () => {
-  scroller.scrollTo('contact', {
-    duration: 800,
-    smooth: true,
-  });
-};
-
-const scrollToTop = () => {
-  animateScroll.scrollToTop({
-    duration: 800,
-    smooth: true,
-  });
-};
-const open = () => {
-  window.location.assign('/gallery');
-};
 function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const [isScrolledToTop, setIsScrolledToTop] = useState(true);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const handleHomeClick = () => {
+    if (!isScrolledToTop) {
+      animateScroll.scrollToTop({
+        duration: 800,
+        smooth: true,
+        onEnd: () => setIsScrolledToTop(true),
+      });
+      setIsScrolledToTop(false);
+    } else {
+      // If already scrolled to top, refresh the page
+      window.location.reload();
+    }
+  };
+
+  const checkScrollPosition = () => {
+    setIsScrolledToTop(window.pageYOffset === 0);
+  };
+
+  useEffect(() => {
+    checkScrollPosition(); // Check initial scroll position
+    window.addEventListener('scroll', checkScrollPosition);
+    return () => {
+      window.removeEventListener('scroll', checkScrollPosition);
+    };
+  }, []);
 
   const scrollToContact = () => {
     scroller.scrollTo('contact', {
@@ -64,13 +73,25 @@ function Home() {
       smooth: true,
     });
   };
-  
+
+ 
+  const scrollToTop = () => {
+    animateScroll.scrollToTop({
+      duration: 800,
+      smooth: true,
+      
+    });
+  };
+  const open = () => {
+    window.location.assign('/gallery');
+  };
+
   return (
     <div>
       <header className='sticky-header'>
         <Navbar className="navbar-with-shadow" bg="light" expand="lg">
           <Container className='ret'>
-            <Navbar.Brand as={Link} to="/" onClick={scrollToTop}>Rebalance</Navbar.Brand>
+            <Navbar.Brand as={Link} to="/" onClick={handleHomeClick}>Rebalance</Navbar.Brand>
             <Navbar.Toggle
               aria-controls="basic-navbar-nav"
               onClick={toggleMobileMenu}
@@ -82,10 +103,10 @@ function Home() {
               className={isMobileMenuOpen ? 'slide-in' : ''}
             >
               <Nav className="me-auto">
-                <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link>
+                <Nav.Link as={Link} to="/" onClick={handleHomeClick}><b>Home</b></Nav.Link>
                 <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
                 <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link>
-                <Nav.Link as={Link} to="/aboutus"><b>About</b></Nav.Link>
+                <Nav.Link as={Link} to="/aboutus" onClick={scrollToTop}><b>About</b></Nav.Link>
                 <Nav.Link as={Link} to="/gallery"><b>Gallery</b></Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -107,7 +128,8 @@ function Home() {
       {/* <H /> */}
       <Services />
       <Map />
-      <BasicExample />
+      <DropdawnQuestions
+       />
       <Contact />
       <br></br>
     </div>
@@ -119,7 +141,20 @@ function Gallery() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
+  const scrollToContact = () => {
+    scroller.scrollTo('contact', {
+      duration: 800,
+      smooth: true,
+    });
+  };
+  const scrollToTop = () => {
+    animateScroll.scrollToTop({
+      duration: 800,
+      smooth: true,
+      
+    });
+  };
+ 
   
   return (
     <div>
@@ -141,6 +176,7 @@ function Gallery() {
                   <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> {/* Use onClick event to scroll to top */}
                   <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
                   <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link> {/* Use onClick event to scroll to Contact */}
+                  <Nav.Link as={Link} to="/aboutus" onClick={scrollToTop}><b>About</b></Nav.Link>
                 </Nav>
               </Navbar.Collapse> 
             </Container>
@@ -163,15 +199,26 @@ function Gallery() {
     </div>
   );
 }
-
 function Aboutt() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  const scrollToContact = () => {
+    scroller.scrollTo('contact', {
+      duration: 800,
+      smooth: true,
+    });
+  };
+  const scrollToTop = () => {
+    animateScroll.scrollToTop({
+      duration: 800,
+      smooth: true,
+      
+    });
+  };
 
-  
   
   
   return (
