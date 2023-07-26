@@ -1,7 +1,9 @@
-import React from 'react';
+import React ,{useState}from 'react';
 import {BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import {Element, scroller, animateScroll } from 'react-scroll'; // Import from react-scroll
 import Container from 'react-bootstrap/Container';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Services from './components/Services';
@@ -50,25 +52,46 @@ const open = () => {
   window.location.assign('/gallery');
 };
 function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const scrollToContact = () => {
+    scroller.scrollTo('contact', {
+      duration: 800,
+      smooth: true,
+    });
+  };
+  
   return (
     <div>
-       <header className='sticky-header'>   
-          <Navbar className="navbar-with-shadow" bg="light" expand="lg">
-            <Container className='ret'>
-              <Navbar.Brand as={Link} to="/" onClick={scrollToTop}>Rebalance</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                  <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> 
-                  <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
-                  <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link> 
-                  <Nav.Link   as={Link} to="/aboutus"><b>About</b></Nav.Link> 
-                  <Nav.Link   as={Link} to="/gallery"><b>Gallery</b></Nav.Link> 
-                </Nav>
-              </Navbar.Collapse> 
-            </Container>
-          </Navbar>
-        </header>
+      <header className='sticky-header'>
+        <Navbar className="navbar-with-shadow" bg="light" expand="lg">
+          <Container className='ret'>
+            <Navbar.Brand as={Link} to="/" onClick={scrollToTop}>Rebalance</Navbar.Brand>
+            <Navbar.Toggle
+              aria-controls="basic-navbar-nav"
+              onClick={toggleMobileMenu}
+            >
+              <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+            </Navbar.Toggle>
+            <Navbar.Collapse
+              id="basic-navbar-nav"
+              className={isMobileMenuOpen ? 'slide-in' : ''}
+            >
+              <Nav className="me-auto">
+                <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link>
+                <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
+                <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link>
+                <Nav.Link as={Link} to="/aboutus"><b>About</b></Nav.Link>
+                <Nav.Link as={Link} to="/gallery"><b>Gallery</b></Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </header>
       <Bhariheading />
       <br></br>
       <Clinic />
@@ -127,6 +150,7 @@ function Gallery() {
 }
 
 function Aboutt() {
+  
   
   return (
     <div>
