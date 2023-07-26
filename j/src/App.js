@@ -107,7 +107,7 @@ function Home() {
                 <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
                 <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link>
                 <Nav.Link as={Link} to="/aboutus" onClick={scrollToTop}><b>About</b></Nav.Link>
-                <Nav.Link as={Link} to="/gallery"><b>Gallery</b></Nav.Link>
+                <Nav.Link as={Link} onClick={scrollToTop} to="/gallery"><b>Gallery</b></Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -241,7 +241,7 @@ function Aboutt() {
                   <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> {/* Use onClick event to scroll to top */}
                   <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
                   <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link> {/* Use onClick event to scroll to Contact */}
-                  <Nav.Link   as={Link} to="/gallery"><b>Gallery</b></Nav.Link>
+                  <Nav.Link  onClick={scrollToTop}  as={Link} to="/gallery"><b>Gallery</b></Nav.Link>
                 </Nav>
               </Navbar.Collapse> 
             </Container>
