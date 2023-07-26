@@ -71,4 +71,16 @@
   /* Add other styling properties as needed */
 }
 
-/* bbbb */
+/* about */
+/* AboutUs.css */
+@import url('https://fonts.googleapis.com/css2?family=Your+Unique+Font&display=swap');
+
+/* Animation keyframes */
+@keyframes popUp {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animated-heading {
+  font-family: 'Your Unique Font', sans-serif; /* Replace 'Your Unique Font' with the actual font name */
+  animation: popUp 1s ease-in-out; /* Animation duration, easing function can be adjusted */
+}

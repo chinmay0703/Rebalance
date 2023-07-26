@@ -125,7 +125,9 @@ function Gallery() {
     </div>
   );
 }
+
 function Aboutt() {
+  
   return (
     <div>
        <header className='sticky-header'>   
@@ -146,8 +148,18 @@ function Aboutt() {
         </header>
         <br></br>
         <br></br>
+        <Bhariheading />
+      <br></br>
+      <Clinic />
+      <Tagline />
+      <br></br>
         <br></br>
-        <center><h1>About Us</h1></center>
+        {/* <br></br>
+        <br></br> */}
+        <div className="about-us">
+     <center> <h1 className="animated-heading"><b>About Us</b></h1></center>
+      {/* Add the rest of your content here */}
+    </div>
    <br></br>
        <Aboutus ></Aboutus>
         <br></br>
