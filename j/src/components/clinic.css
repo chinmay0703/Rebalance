@@ -665,7 +665,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  max-width: 600px; /* Set a maximum width for the image */
+  max-width: 600px; 
   height: auto;
   /* border-radius: 5px */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
