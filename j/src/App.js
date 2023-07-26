@@ -114,14 +114,29 @@ function Home() {
   );
 }
 function Gallery() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  
   return (
     <div>
        <header className='sticky-header'>   
        <Navbar className="navbar-with-shadow" bg="light" expand="lg" fixed="top">
             <Container className='ret'>
               <Navbar.Brand as={Link} to="/" onClick={scrollToTop}>Rebalance</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
+              <Navbar.Toggle
+              aria-controls="basic-navbar-nav"
+              onClick={toggleMobileMenu}
+            >
+              <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+            </Navbar.Toggle>
+            <Navbar.Collapse
+              id="basic-navbar-nav"
+              className={isMobileMenuOpen ? 'slide-in' : ''}
+            >
                 <Nav className="me-auto">
                   <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> {/* Use onClick event to scroll to top */}
                   <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
@@ -150,6 +165,13 @@ function Gallery() {
 }
 
 function Aboutt() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  
   
   
   return (
@@ -158,8 +180,16 @@ function Aboutt() {
        <Navbar className="navbar-with-shadow" bg="light" expand="lg" fixed="top">
             <Container className='ret'>
               <Navbar.Brand as={Link} to="/" onClick={scrollToTop}>Rebalance</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
+              <Navbar.Toggle
+              aria-controls="basic-navbar-nav"
+              onClick={toggleMobileMenu}
+            >
+              <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+            </Navbar.Toggle>
+            <Navbar.Collapse
+              id="basic-navbar-nav"
+              className={isMobileMenuOpen ? 'slide-in' : ''}
+            >
                 <Nav className="me-auto">
                   <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> {/* Use onClick event to scroll to top */}
                   <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
