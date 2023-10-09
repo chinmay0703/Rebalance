@@ -2,7 +2,7 @@ import './clinic.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import React, { useRef, useEffect, useState } from 'react';
 
-const BasicExample = () => {
+const DropdawnQuestions = () => {
   const componentRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -60,4 +60,4 @@ const BasicExample = () => {
   );
 };
 
-export default BasicExample;
+export default DropdawnQuestions;

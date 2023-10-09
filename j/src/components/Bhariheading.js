@@ -1,13 +1,13 @@
 import './clinic.css';
-function Bhariheading(){
-  
+function Bhariheading() {
+
   return (
     <div className='change'>
-<br></br>
-<h3 className='middu'>Introducing Your Path to Healing</h3>
+      <br></br>
+      <h3 className='middu'>Introducing Your Path to Healing</h3>
     </div>
-      );
-      };
-    
+  );
+};
+
 export default Bhariheading;
 

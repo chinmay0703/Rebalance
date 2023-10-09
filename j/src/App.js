@@ -19,6 +19,8 @@ import Map from './components/Map';
 import ChatBot from './components/ChatBox';
 import Aboutus from './components/Aboutus';
 
+
+
 function App() {
   return (
     <Router>
@@ -37,6 +39,7 @@ function App() {
 function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolledToTop, setIsScrolledToTop] = useState(true);
+  
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -82,6 +85,9 @@ function Home() {
       
     });
   };
+  
+
+
   const open = () => {
     window.location.assign('/gallery');
   };
@@ -104,7 +110,7 @@ function Home() {
             >
               <Nav className="me-auto">
                 <Nav.Link as={Link} to="/" onClick={handleHomeClick}><b>Home</b></Nav.Link>
-                <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
+                <Nav.Link href="https://www.google.com/maps/dir/rebalance+physiotherapy+clinic+bangalore/18.5118881,73.7830858/@13.2024688,77.3054778,10.08z/data=!4m9!4m8!1m5!1m1!1s0x3bae1325625e49d9:0xf06ea16d5911cc6d!2m2!1d77.7171932!2d12.9646641!1m1!4e1?entry=ttu"><b>Location</b></Nav.Link>
                 <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link>
                 <Nav.Link as={Link} to="/aboutus" onClick={scrollToTop}><b>About</b></Nav.Link>
                 <Nav.Link as={Link} onClick={scrollToTop} to="/gallery"><b>Gallery</b></Nav.Link>
@@ -113,10 +119,12 @@ function Home() {
           </Container>
         </Navbar>
       </header>
+    
       <Bhariheading />
       <br></br>
       <Clinic />
       <ChatBot />
+
       <Tagline />
       <Advanced />
       <br></br>
@@ -174,7 +182,7 @@ function Gallery() {
             >
                 <Nav className="me-auto">
                   <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> {/* Use onClick event to scroll to top */}
-                  <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
+                  <Nav.Link href="https://www.google.com/maps/dir/rebalance+physiotherapy+clinic+bangalore/18.5118881,73.7830858/@13.2024688,77.3054778,10.08z/data=!4m9!4m8!1m5!1m1!1s0x3bae1325625e49d9:0xf06ea16d5911cc6d!2m2!1d77.7171932!2d12.9646641!1m1!4e1?entry=ttu"><b>Location</b></Nav.Link>
                   <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link> {/* Use onClick event to scroll to Contact */}
                   <Nav.Link as={Link} to="/aboutus" onClick={scrollToTop}><b>About</b></Nav.Link>
                 </Nav>
@@ -239,7 +247,7 @@ function Aboutt() {
             >
                 <Nav className="me-auto">
                   <Nav.Link as={Link} to="/" onClick={scrollToTop}><b>Home</b></Nav.Link> {/* Use onClick event to scroll to top */}
-                  <Nav.Link href="https://goo.gl/maps/5kjjRq2Gz4bw7iQY8"><b>Location</b></Nav.Link>
+                  <Nav.Link href="https://www.google.com/maps/dir/rebalance+physiotherapy+clinic+bangalore/18.5118881,73.7830858/@13.2024688,77.3054778,10.08z/data=!4m9!4m8!1m5!1m1!1s0x3bae1325625e49d9:0xf06ea16d5911cc6d!2m2!1d77.7171932!2d12.9646641!1m1!4e1?entry=ttu"><b>Location</b></Nav.Link>
                   <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link> {/* Use onClick event to scroll to Contact */}
                   <Nav.Link  onClick={scrollToTop}  as={Link} to="/gallery"><b>Gallery</b></Nav.Link>
                 </Nav>
@@ -268,6 +276,7 @@ function Aboutt() {
         <br></br>
       <Contact />
       <ChatBot />
+      
       <br></br>
     </div>
   );
