@@ -62,7 +62,7 @@ const DropdawnQuestions = () => {
         <br></br>
       </div>
       <div>
-        <div className='c'>
+        {/* <div className='c'>
 
           <h1 className='text-center fancy-heading'>
             Our Reviews
@@ -90,7 +90,7 @@ const DropdawnQuestions = () => {
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-        </div>
+        </div> */}
       </div>
 
     </div>
