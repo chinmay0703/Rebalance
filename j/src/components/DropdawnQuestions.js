@@ -70,7 +70,7 @@ const DropdawnQuestions = () => {
 
 
         </div>
-        <div id="carouselExampleRide" class="carousel slide containerr" data-bs-ride="carousel">
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src={review1} class="d-block w-100" alt="Review 1" />
