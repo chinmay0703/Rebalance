@@ -5,6 +5,7 @@ import review1 from "../components/images/review1.png"
 import review2 from "../components/images/review2.png"
 import review3 from "../components/images/review3.png"
 import "../components/Drop.css";
+import CircularDemo from './CircularDemo';
 const DropdawnQuestions = () => {
   const componentRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -61,6 +62,7 @@ const DropdawnQuestions = () => {
 
         <br></br>
       </div>
+      <CircularDemo></CircularDemo>
       <div>
         {/* <div className='c'>
 
