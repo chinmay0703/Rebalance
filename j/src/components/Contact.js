@@ -116,7 +116,7 @@ const Contact = () => {
                   </div>
                   <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="https://www.google.com/maps/dir/rebalance+physiotherapy+clinic+bangalore/18.5118881,73.7830858/@13.2024688,77.3054778,10.08z/data=!4m9!4m8!1m5!1m1!1s0x3bae1325625e49d9:0xf06ea16d5911cc6d!2m2!1d77.7171932!2d12.9646641!1m1!4e1?entry=ttu">Location</a></li>
+                    <li><a href="https://maps.app.goo.gl/5NPMoY3nmSbquKcg8">Location</a></li>
                     <li><a href="#">ContactUs</a></li>
                     <li><a href="/gallery">Gallery</a></li>
                     <li><a href="/aboutus">About us</a></li>
@@ -140,7 +140,7 @@ const Contact = () => {
                 <div className="footer-menu">
                   <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="https://www.google.com/maps/dir/rebalance+physiotherapy+clinic+bangalore/18.5118881,73.7830858/@13.2024688,77.3054778,10.08z/data=!4m9!4m8!1m5!1m1!1s0x3bae1325625e49d9:0xf06ea16d5911cc6d!2m2!1d77.7171932!2d12.9646641!1m1!4e1?entry=ttu">Location</a></li>
+                    <li><a href="https://maps.app.goo.gl/5NPMoY3nmSbquKcg8">Location</a></li>
                     <li><a href="#">ContactUs</a></li>
                     <li><a href="/gallery">Gallery</a></li>
                     <li><a href="/aboutus">About us</a></li>
