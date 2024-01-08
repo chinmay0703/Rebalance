@@ -710,6 +710,10 @@ body {
 .chatbot-container:hover {
   opacity: 1; /* Ensure full opacity on hover */
 }
+.carousel-item {
+
+  height: 350px;
+}
 
 
 .whatsapp-logo {
