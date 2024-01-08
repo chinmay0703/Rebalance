@@ -11,7 +11,7 @@ const Clinic = () => {
           className='img-fluid'
           src={pic}
           alt="Your_image"
-          style={{ width: "100%" }}
+          style={{ width: "100%" ,height:"auto"}}
         />
         {/* Overlay div */}
         <div className='overlay'>
