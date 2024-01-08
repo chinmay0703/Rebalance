@@ -18,6 +18,7 @@ import ImageGallery from './components/ImageGallery';
 import Map from './components/Map';
 import ChatBot from './components/ChatBox';
 import Aboutus from './components/Aboutus';
+// import Review from './components/Review';
 
 
 
@@ -138,6 +139,7 @@ function Home() {
       <Map />
       <DropdawnQuestions
        />
+       {/* <Review></Review> */}
       <Contact />
       <br></br>
     </div>

@@ -26,6 +26,7 @@
     "react-spring": "^9.7.1",
     "react-swipeable-carousel": "^1.0.5",
     "slick-carousel": "^1.8.1",
+    "swiper": "^11.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

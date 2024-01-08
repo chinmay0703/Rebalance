@@ -2,6 +2,7 @@ import './clinic.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import React, { useRef, useEffect, useState } from 'react';
 import "../components/Drop.css";
+import ReviewSlider from './ReviewSlider';
 const DropdawnQuestions = () => {
   const componentRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -60,6 +61,7 @@ const DropdawnQuestions = () => {
       </div>
      
       <div>
+        <ReviewSlider></ReviewSlider>
         {/* <div className='c'>
 
           <h1 className='text-center fancy-heading'>
