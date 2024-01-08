@@ -21,7 +21,7 @@ function ReviewSlider() {
             <div style={{ textAlign: 'center' }}>
                 <h3 className='text-center text-black' style={{ color: 'black' }}>What Our Patients Say</h3>
                 <p className='text-center text-black'>Rated 5.0 stars by our customers on Google</p>
-                <hr style={{ width: '50px', borderTop: '3px solid', margin: 'auto', marginBottom: '20px' }}  className='whitee'/>
+                <hr style={{ width: '100px', borderTop: '3px solid black', margin: 'auto', marginBottom: '20px' }}  className='whitee'/>
                 <Carousel interval={2000}>
                     {images.map((image, index) => (
                         <Carousel.Item key={index}>
@@ -41,7 +41,7 @@ function ReviewSlider() {
                         </Carousel.Item>
                     ))}
                 </Carousel>
-               <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}> <button className='btn btn-primary'>GET CONSULTATION NOW</button></Link>
+               <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}> <button className='btn btn-primary my-3'>GET CONSULTATION NOW</button></Link>
             </div>
         </div>
     );
