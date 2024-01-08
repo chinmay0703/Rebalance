@@ -1068,3 +1068,7 @@ body {
   border-radius: 20%;
   color: #72a85b;
 }
+
+.faint-gray-card {
+  background-color: #f0f0f0; /* Faint gray color */
+}
