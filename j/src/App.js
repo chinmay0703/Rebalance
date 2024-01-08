@@ -111,7 +111,7 @@ function Home() {
             >
               <Nav className="me-auto">
                 <Nav.Link as={Link} to="/" onClick={handleHomeClick}><b>Home</b></Nav.Link>
-                <Nav.Link href="https://www.google.com/maps/dir/rebalance+physiotherapy+clinic+bangalore/18.5118881,73.7830858/@13.2024688,77.3054778,10.08z/data=!4m9!4m8!1m5!1m1!1s0x3bae1325625e49d9:0xf06ea16d5911cc6d!2m2!1d77.7171932!2d12.9646641!1m1!4e1?entry=ttu"><b>Location</b></Nav.Link>
+                <Nav.Link href="https://maps.app.goo.gl/5NPMoY3nmSbquKcg8"><b>Location</b></Nav.Link>
                 <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link>
                 <Nav.Link as={Link} to="/aboutus" onClick={scrollToTop}><b>About</b></Nav.Link>
                 <Nav.Link as={Link} onClick={scrollToTop} to="/gallery"><b>Gallery</b></Nav.Link>
@@ -130,8 +130,7 @@ function Home() {
       <Advanced />
       <br></br>
       <br></br>
-     <center> <div className='btn btn-primary' onClick={open}> Open-gallery</div>
-     </center>
+    
      <br></br>
      
       {/* <H /> */}

@@ -72,8 +72,13 @@ const Advanced = () => {
           ))}
         </Carousel>
       </div>
-      <div style={{ padding: '10px', textAlign: 'center' }} className='colorga '>
-        <h1 className='text-center colorrr my-3 upper'><b>Take a step towards rebalancing your body</b></h1><br></br>
+      <div className='upper'>
+        
+        <div className='upper'>
+          <br></br>
+          <h1 className='down'>Take a step towards rebalancing your body.</h1>
+        </div>
+        {/* <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}> <button className='btn btn-primary'>GET CONSULTATION NOW</button></Link> */}
       </div>
     </div>
   );
