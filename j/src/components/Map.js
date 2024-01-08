@@ -33,7 +33,7 @@ const Map = () => {
         <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}>  <button className='btn btn-success text-center justify-content-center align-item-center my-2' >Book NOW</button></Link>
       </div>
       <div className='c'>
-        <center> <h5 className='bu'>CONTACT US</h5></center>
+        <center><h5 className='bu'>CONTACT US</h5></center>
         <img src={mapp} alt="I" className='res' onClick={handleClick} />
       </div>
     </div>

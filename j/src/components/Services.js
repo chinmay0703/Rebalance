@@ -31,9 +31,8 @@ function Services() {
   return (
     <div className='ser'>
       <SpecialOffer />
-      <div className='maintain'>
-        <h3 className='serv'>We Offer</h3>
-      </div>
+      <h3 className='text-center'>Multiple Techniques We Provide</h3>
+      <hr></hr>
       <br />
       <div className='content-container'>
         <div className='text-container'>

@@ -63,6 +63,10 @@
   color: rgb(11, 11, 11); /* Change the link color to green */
 }
 
+.coleo{
+  background-color: #75f16c;
+}
+
 /* src/components/ScrollingComponent.css */
 .sticky-header {
   position: sticky;
@@ -84,8 +88,3 @@
   font-family: 'Your Unique Font', sans-serif; /* Replace 'Your Unique Font' with the actual font name */
   animation: popUp 1s ease-in-out; /* Animation duration, easing function can be adjusted */
 }
-/* bbhbh */
-
-/* Add this CSS to your existing styles */
-
-/* Slide-in animation */

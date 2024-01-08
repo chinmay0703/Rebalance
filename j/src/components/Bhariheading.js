@@ -2,9 +2,9 @@ import './clinic.css';
 function Bhariheading() {
 
   return (
-    <div className='change'>
+    <div className='chane'>
       <br></br>
-      <h3 className='middu'>Introducing Your Path to Healing</h3>
+      {/* <h3 className='middu'>Introducing Your Path to Healing</h3> */}
     </div>
   );
 };

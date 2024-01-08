@@ -501,6 +501,25 @@ body {
 .visible {
   animation: fade-in 0.8s ease-in-out;
 }
+.position-relative {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 44%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+ /* Adjust the background color and opacity */
+  padding: 20px;
+  border-radius: 10px;
+}
+.btn-primaryy {
+  background-color: #00bcd4; /* Cyan color */
+  border: none;
+  padding: 15px 15px; /* Adjust padding to increase the size */
+  border-radius: 0; /* Make the button square */
+}
 
 @keyframes fade-in {
   0% {

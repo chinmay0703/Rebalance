@@ -51,8 +51,9 @@ const Advanced = () => {
   return (
     <div className={`scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
       <h3>Multiple Treatment We Provide</h3>
+      <hr></hr>
       <div className="d-flex justify-content-center align-items-center vh-10">
-        <Carousel interval={3000} className="mx-6 my-6">
+        <Carousel interval={3000} className="mx-6 ">
           {items.map((item, index) => (
             <Carousel.Item key={index} className="py-1">
               <Card className="faint-gray-card">
@@ -71,12 +72,14 @@ const Advanced = () => {
             </Carousel.Item>
           ))}
         </Carousel>
-      </div>
-      <div className='upper'>
         
-        <div className='upper'>
+      </div>
+      <hr></hr>
+      <div className='upper'>
+
+      <div style={{ padding: '1px', textAlign: 'center' }} className='colorga ' >
           <br></br>
-          <h1 className='down'>Take a step towards rebalancing your body.</h1>
+          <h3 className='dow'>Take a step towards rebalancing your body.</h3>
         </div>
         {/* <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}> <button className='btn btn-primary'>GET CONSULTATION NOW</button></Link> */}
       </div>

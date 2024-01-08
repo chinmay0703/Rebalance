@@ -13,20 +13,19 @@ const SpecialOffer = () => {
 
   useEffect(() => {
     setFlash({ opacity: 1 });
-  }, [ setFlash]);
+  }, [setFlash]);
 
   return (
     <div>    <animated.div style={flash} className="special-offer">
-      <img  src={er} className='fg' alt="dfd"></img>
+      <img src={er} className='fg' alt="dfd"></img>
       {/* Special offer content */}
       {/* <h1 style={flash}> Grand Opening Special!</h1> */}
       <animated.p > </animated.p>
     </animated.div>
-  <h6 className='fontt'>  Book your initial consultation now and receive a discount on your first treatment session. Don't miss this opportunity to embark on your path to optimal health and wellness.
-  </h6>
-  <br>
-  </br></div>
-    
+    <p className='text-center mx-4'>Book your initial consultation now and receive a discount on your first treatment session. Don't miss this opportunity to embark on your path to optimal health and wellness.</p>
+      <br>
+      </br></div>
+
   );
 };
 
