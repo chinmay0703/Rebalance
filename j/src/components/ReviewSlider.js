@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Carousel, Button } from 'react-bootstrap';
 import "../components/review.css";
 import pic1 from "../components/images/IMG-20240108-WA0000.jpg";
@@ -14,17 +14,35 @@ import pic10 from "../components/images/IMG-20240108-WA0009.jpg";
 import { Link } from 'react-router-dom';
 
 function ReviewSlider() {
+    const componentRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+        });
+      });
+      observer.observe(componentRef.current);
+      return () => {
+        observer.disconnect();
+      };
+    }, []);
     const images = [pic1, pic2, pic3, pic8, pic9, pic10];
 
     return (
-        <div style={{ padding: '20px' }} className='colorga'>
+        <div style={{ padding: '20px' }} className={` colorga scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
             <div style={{ textAlign: 'center' }}>
                 <h3 className='text-center text-black' style={{ color: 'black' }}>What Our Patients Say</h3>
                 <p className='text-center text-black'>Rated 5.0 stars by our customers on Google</p>
                 <hr style={{ width: '100px', borderTop: '3px solid black', margin: 'auto', marginBottom: '20px' }}  className='whitee'/>
-                <Carousel interval={2000}>
+                <Carousel interval={2000} >
                     {images.map((image, index) => (
-                        <Carousel.Item key={index}>
+                        <Carousel.Item key={index} >
                             <img
                                 className="d-block mx-auto my-6"
                                 style={{
