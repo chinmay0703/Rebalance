@@ -20,6 +20,7 @@ import ChatBot from './components/ChatBox';
 import Aboutus from './components/Aboutus';
 // import Review from './components/Review';
 import pic from './components/images/photw.jpg';
+import Imagecolumn from './components/Imagecolumn';
 
 
 function App() {
@@ -135,6 +136,7 @@ function Home() {
       {/* <Bhariheading /> */}
       {/* <br></br> */}
       <Clinic/>
+      
       <ChatBot />
 
       {/* <Tagline /> */}
@@ -146,7 +148,9 @@ function Home() {
 
       {/* <H /> */}
       <Services />
-      <Map />
+      <Imagecolumn></Imagecolumn>
+      <br/>
+      <Map/>
       <DropdawnQuestions
       />
       {/* <Review></Review> */}

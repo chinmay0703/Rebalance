@@ -49,7 +49,7 @@ const Advanced = () => {
   }));
 
   return (
-    <div className={`scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
+    <div className={` hgh scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
       <h3>Multiple Treatment We Provide</h3>
       <hr></hr>
       <div className="d-flex justify-content-center align-items-center vh-10">

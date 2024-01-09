@@ -67,7 +67,6 @@ const Contact = () => {
                   <div className="cta-text">
                     <h4 className='mx-2'>Find us</h4>
                     <span className='mx-1'>610, 2nd floor, AECS Layout C Block <br></br> AECS Layout Whitefield, Bangalore</span>
-
                   </div>
                 </div>
               </div> */}
@@ -94,7 +93,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-
               <div className="col-xl-3 col-md-3 mb-30 ">
                 <div className="single-cta">
                   <div className='col-1'>
