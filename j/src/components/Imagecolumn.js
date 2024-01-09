@@ -39,7 +39,6 @@ const Imagecolumn = () => {
           <div class="col-sm-12 col-md-6 col-lg-6 my-4">
             <div class="card " style={{ backgroundColor: "rgba(255, 255, 255, 0.9", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", width: "100%", height: "100%" }}>
               <h1 class="display text-center card-title my-3">Our expertise</h1>
-              {/* <h3>The physiotherapy treatments on offer at Rebalance include but are not limited to:</h3> */}
               <ul class="list-group card-body">
                 <li class="list-group-item mx-1" style={{ backgroundColor: " #f0f2f7" }} >1) Spinal Injuries (Disc, Muscles)</li>
                 <li class="list-group-item mx-1">2) Sports Injuries</li>
