@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './clinic.css';
 import mapp from './images/map.jpg';
 import { Link } from 'react-router-dom';
+// import Bhariheading from './Bhariheading';
 const Map = () => {
   const componentRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -36,6 +37,7 @@ const Map = () => {
         <center><h5 className='bu'>CONTACT US</h5></center>
         <img src={mapp} alt="I" className='res' onClick={handleClick} />
       </div>
+      {/* <Bhariheading></Bhariheading> */}
     </div>
   );
 };

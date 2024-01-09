@@ -133,7 +133,7 @@ function Home() {
           </div>
         </nav>
       </header>
-      {/* <Bhariheading /> */}
+      
       {/* <br></br> */}
       <Clinic/>
       <ChatBot />
