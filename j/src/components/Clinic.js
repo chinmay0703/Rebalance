@@ -11,13 +11,12 @@ const Clinic = () => {
           className='img-fluid'
           src={pic}
           alt="Your_image"
-          style={{ width: "100%" ,height:"auto"}}
+          style={{ width: "100%", height: "auto" }}
         />
-        {/* Overlay div */}
         <div className='overlay'>
-        <b>  <h2 className='text-white'>We give solution</h2></b>
+          <b> <h2 className='text-white'>We give solution</h2></b>
           <h4 className='text-white'>To your pain</h4>
-        <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}>  <button className='btn btn-primaryy my-2'>Book now</button></Link>
+          <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}>  <button className='btn btn-primaryy my-2'>Book now</button></Link>
         </div>
       </div>
     </div>

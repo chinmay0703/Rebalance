@@ -77,11 +77,10 @@ const Advanced = () => {
       <hr></hr>
       <div className='upper'>
 
-      <div style={{ padding: '1px', textAlign: 'center' }} className='colorga ' >
+      <div style={{ padding: '1px', textAlign: 'center', backgroundImage: 'linear-gradient(to right,#5067cb, #f0f0f0)' }} className='colorga'>
           <br></br>
-          <h3 className='dow'>Take a step towards rebalancing your body.</h3>
+          <b><h3 className='dow'>Take a step towards rebalancing your body.</h3></b>
         </div>
-        {/* <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}> <button className='btn btn-primary'>GET CONSULTATION NOW</button></Link> */}
       </div>
     </div>
   );
