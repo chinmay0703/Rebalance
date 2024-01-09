@@ -72,14 +72,15 @@ const Advanced = () => {
             </Carousel.Item>
           ))}
         </Carousel>
-        
+
       </div>
       <hr></hr>
       <div className='upper'>
 
-      <div style={{ padding: '1px', textAlign: 'center', backgroundImage: 'linear-gradient(to right,#5067cb, #f0f0f0)' }} className='colorga'>
+        <div style={{ padding: '1px', textAlign: 'center', backgroundImage: 'linear-gradient(to right,#7f90e7, #f0f0f0)' }} className='colorga'>
           <br></br>
-          <b><h3 className='dow'>Take a step towards rebalancing your body.</h3></b>
+          <b><h3 className='dow' style={{ fontWeight: 'bold' }}>Take a step towards rebalancing your body.</h3></b>
+
         </div>
       </div>
     </div>
