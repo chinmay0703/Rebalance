@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import './clinic.css';
 import er from './images/ytyy.jpg';
+import Imagecolumn from './Imagecolumn';
 
 const SpecialOffer = () => {
   const [flash, setFlash] = useSpring(() => ({
@@ -22,9 +23,11 @@ const SpecialOffer = () => {
       {/* <h1 style={flash}> Grand Opening Special!</h1> */}
       <animated.p > </animated.p>
     </animated.div>
-    <p className='text-center mx-4'>Book your initial consultation now and receive a discount on your first treatment session. Don't miss this opportunity to embark on your path to optimal health and wellness.</p>
-      <br>
-      </br></div>
+      <p className='text-center mx-4'>Book your initial consultation now and receive a discount on your first treatment session. Don't miss this opportunity to embark on your path to optimal health and wellness.</p>
+      <br></br>
+      <Imagecolumn></Imagecolumn>
+      <hr></hr>
+    </div>
 
   );
 };

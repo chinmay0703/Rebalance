@@ -136,11 +136,10 @@ function Home() {
       {/* <Bhariheading /> */}
       {/* <br></br> */}
       <Clinic/>
-      
       <ChatBot />
-
       {/* <Tagline /> */}
       <Advanced />
+      
       <br></br>
       <br></br>
 
@@ -148,7 +147,8 @@ function Home() {
 
       {/* <H /> */}
       <Services />
-      <Imagecolumn></Imagecolumn>
+      
+    
       <br/>
       <Map/>
       <DropdawnQuestions
