@@ -113,19 +113,19 @@ function Home() {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <b> <a class="nav-link active" aria-current="page" href="/" onClick={scrollToTop}>Home</a></b>
+                  <b> <a class="nav-link active mx-1" aria-current="page" href="/" onClick={scrollToTop}>Home</a></b>
                 </li>
                 <li class="nav-item">
-                  <b> <a class="nav-link active" aria-current="page" href="/gallery">Gallery</a></b>
+                  <b> <a class="nav-link active mx-1" aria-current="page" href="/gallery">Gallery</a></b>
                 </li>
                 <li class="nav-item">
-                  <b> <a class="nav-link active" aria-current="page" href="/aboutus" onClick={scrollToTop} >AboutUs</a></b>
+                  <b> <a class="nav-link active mx-1" aria-current="page" href="/aboutus" onClick={scrollToTop} >AboutUs</a></b>
                 </li>
                 <li class="nav-item">
-                  <b> <a class="nav-link active" aria-current="page" href="https://maps.app.goo.gl/5NPMoY3nmSbquKcg8">Location</a></b>
+                  <b> <a class="nav-link active mx-1" aria-current="page" href="https://maps.app.goo.gl/5NPMoY3nmSbquKcg8">Location</a></b>
                 </li>
                 <li class="nav-item">
-                <Nav.Link onClick={scrollToContact}><b>Contact Us</b></Nav.Link>
+                <Nav.Link onClick={scrollToContact }className="mx-1"><b>Contact Us</b></Nav.Link>
                 </li>
               </ul>
 
