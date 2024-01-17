@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import pic from './images/photw.jpg';
 import { scroller, animateScroll } from 'react-scroll';
 import Nav from 'react-bootstrap/Nav';
@@ -8,11 +8,7 @@ import Map from './Map';
 import Contact from './Contact';
 import ChatBot from './ChatBox';
 function Aboutt() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-    const toggleMobileMenu = () => {
-      setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
     const scrollToContact = () => {
       scroller.scrollTo('contact', {
         duration: 800,

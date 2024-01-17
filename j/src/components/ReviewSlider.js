@@ -1,13 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Carousel, Button } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import "../components/review.css";
 import pic1 from "../components/images/IMG-20240108-WA0000.jpg";
 import pic2 from "../components/images/IMG-20240108-WA0001.jpg";
 import pic3 from "../components/images/IMG-20240108-WA0002.jpg";
-// import pic4 from "../components/images/IMG-20240108-WA0003.jpg";
-// import pic5 from "../components/images/IMG-20240108-WA0004.jpg";
-// import pic6 from "../components/images/IMG-20240108-WA0005.jpg";
-// import pic7 from "../components/images/IMG-20240108-WA0006.jpg";
 import pic8 from "../components/images/IMG-20240108-WA0007.jpg";
 import pic9 from "../components/images/IMG-20240108-WA0008.jpg";
 import pic10 from "../components/images/IMG-20240108-WA0009.jpg";

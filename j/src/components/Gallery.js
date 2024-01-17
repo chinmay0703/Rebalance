@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Clinic from './Clinic';
 import ImageGallery from './ImageGallery';
 import Map from './Map';
@@ -8,11 +8,7 @@ import Nav from 'react-bootstrap/Nav';
 import pic from './images/photw.jpg';
 import {scroller, animateScroll } from 'react-scroll';
 function Gallery() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
+    
     const scrollToContact = () => {
         scroller.scrollTo('contact', {
             duration: 800,
@@ -67,7 +63,6 @@ function Gallery() {
             </header>
 
             <Clinic />
-            {/* <Tagline /> */}
             <br></br>
             <br></br>
             <ImageGallery></ImageGallery>

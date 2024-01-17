@@ -1,47 +1,22 @@
-import { useEffect, useState } from "react";
+
 import React from "react";
 import Clinic from "./Clinic";
 import ChatBot from "./ChatBox";
 import Advanced from "./Carousel";
 import Nav from 'react-bootstrap/Nav';
 import pic from './images/photw.jpg';
-import { Element, scroller, animateScroll } from 'react-scroll';
+import { scroller, animateScroll } from 'react-scroll';
 import Map from "./Map";
 import DropdawnQuestions from "./DropdawnQuestions";
 import Contact from "./Contact";
 import Services from "./Services";
 function Home() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isScrolledToTop, setIsScrolledToTop] = useState(true);
 
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
+  
 
-    const handleHomeClick = () => {
-        if (!isScrolledToTop) {
-            animateScroll.scrollToTop({
-                duration: 800,
-                smooth: true,
-                onEnd: () => setIsScrolledToTop(true),
-            });
-            setIsScrolledToTop(false);
-        } else {
-            window.location.reload();
-        }
-    };
 
-    const checkScrollPosition = () => {
-        setIsScrolledToTop(window.pageYOffset === 0);
-    };
 
-    useEffect(() => {
-        checkScrollPosition();
-        window.addEventListener('scroll', checkScrollPosition);
-        return () => {
-            window.removeEventListener('scroll', checkScrollPosition);
-        };
-    }, []);
+  
 
     const scrollToContact = () => {
         scroller.scrollTo('contact', {
@@ -59,10 +34,7 @@ function Home() {
         });
     };
 
-    const open = () => {
-        window.location.assign('/gallery');
-    };
-
+  
     return (
         <div>
             <header className='sticky-header'>
