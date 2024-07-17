@@ -2,21 +2,31 @@ import React from 'react';
 import './clinic.css';
 import pic from './images/56567.png';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 const Clinic = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    window.location.href = "https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore";
+  }
+
   return (
-    <div className='containr'>
-      <div className='position-relative'>
+    <div className='contaier' style={{ padding: '30px', backgroundColor: '#eee' }} >
+      <div className='position-relative' style={{ borderRadius: '30px' }}>
         <img
           className='img-fluid'
           src={pic}
           alt="Your_image"
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: "100%", height: "auto", borderRadius: '30px' }}
         />
         <div className='overlay'>
-          <b> <h2 className='text-white'>We give solution</h2></b>
-          <h4 className='text-white'>To your pain</h4>
-          <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}>  <button className='btn btn-primaryy my-2'>Book now</button></Link>
+          <b> <h1 className='text-white poppins-bold'>We give solution</h1></b>
+          <h2 className='text-white poppins-semibold'>To your pain</h2>
+          {/* <Link className='my-3' to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore"}>
+
+          </Link> */}
+          <button onClick={handleClick} className=' fancy-btn my-2 px-4 py-2 my-3'>
+            Book now <i className="fas fa-arrow-right"></i>
+          </button>
         </div>
       </div>
     </div>
