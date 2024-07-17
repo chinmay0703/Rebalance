@@ -18,7 +18,7 @@ const Clinic = () => {
           alt="Your_image"
           style={{ width: "100%", height: "auto", borderRadius: '30px' }}
         />
-        <div className='overlay'>
+        <div className='overlay' style={{ paddingTop: '50px' }}>
           <b> <h1 className='text-white poppins-bold'>We give solution</h1></b>
           <h2 className='text-white poppins-semibold'>To your pain</h2>
           {/* <Link className='my-3' to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore"}>
