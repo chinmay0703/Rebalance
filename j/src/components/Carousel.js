@@ -50,20 +50,21 @@ const Advanced = () => {
 
   return (
     <div className={` hgh scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
-      <h3>Multiple Treatment We Provide</h3>
-      <hr></hr>
-      <div className="d-flex justify-content-center align-items-center vh-10">
-        <Carousel interval={3000} className="mx-6 ">
+      <></>
+      <h3 className='poppins-bold my-4'>Multiple Treatment We Provide</h3>
+      {/* <hr></hr> */}
+      <div className="d-flex justify-content-center align-items-center vh-10 py-4" style={{ backgroundColor: '#eee' }}>
+        <Carousel interval={3000} className="mx-6 " style={{ borderRadius: '20px' }}>
           {items.map((item, index) => (
-            <Carousel.Item key={index} className="py-1">
-              <Card className="faint-gray-card">
-                <Card.Img variant="top" src={item.image} className="img-fluid" alt={`Image ${index + 1}`} />
-                <Card.Body className="d-flex flex-column justify-content-between">
-                  <div>
-                    <Card.Title className="text-center mb-3">{item.title}</Card.Title>
-                    <Card.Text className=''>
-                      <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}>
-                        <p className="text-center">Consult Now →</p>
+            <Carousel.Item key={index} className="">
+              <Card className="p-4" style={{ backgroundColor: 'white' }}>
+                <Card.Img variant="top" src={item.image} style={{ borderRadius: '10px' }} className="img-fluid" alt={`Image ${index + 1}`} />
+                <Card.Body className="py-3 d-flex flex-column justify-content-between flex col-12">
+                  <div className='my-1'>
+                    <Card.Title className="text-center poppins-semibold">{item.title}</Card.Title>
+                    <Card.Text className='' >
+                      <Link to={"https://www.eka.care/doctor/dr-vaishnavi-tammewar-physiotherapist-bangalore"}>
+                        <button className="col-12 text-center btn btn-outline-secondary">Consult Now →</button>
                       </Link>
                     </Card.Text>
                   </div>
@@ -73,8 +74,8 @@ const Advanced = () => {
           ))}
         </Carousel>
       </div>
-      <hr></hr>
-      <div className='upper'>
+      {/* <hr></hr> */}
+      <div className='upper my-4'>
         <div style={{ padding: '1px', textAlign: 'center', backgroundImage: 'linear-gradient(to right,##f0f2f7;, #f0f0f0)' }} className='colorga'>
           <br></br>
           <b><h3 className='dow text-black'>Take a step towards rebalancing your body.</h3></b>
