@@ -56,8 +56,8 @@ const Advanced = () => {
     <div className="" ref={componentRef}>
       <></>
       <div className='uper '>
-        <div style={{ padding: '10px', borderRadius: '10px', textAlign: 'center', backgroundColor: 'white' }} className='colorga mx-4'>
-          <h3 className='poppins-semibold p-3 text-neviblur-gradient '>Multiple Treatment We Provide</h3>
+        <div style={{ padding: '5px', borderRadius: '10px', textAlign: 'center', backgroundColor: 'white' }} className='colorga mx-4'>
+          <h3 className='poppins-semibold text-neviblur-gradient py-2'>Multiple Treatment We Provide</h3>
         </div>
       </div>
       {/* <hr></hr> */}
@@ -103,7 +103,7 @@ const Advanced = () => {
         </Carousel>
       </div>
       {/* <hr></hr> */}
-     
+
 
     </div>
   );

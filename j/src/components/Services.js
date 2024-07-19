@@ -37,7 +37,7 @@ function Services() {
     <div className='' style={{ borderRadius: '30px', paddingTop: '0px' }}>
 
       {/* <SpecialOffer /> */}
-      <b><h1 className='text-black  poppins-bold text-neviblur-gradient' style={{ fontWeight: '800px', textAlign: 'center', paddingLeft: '10px', paddingRight: '10px' }} >Take a step towards rebalancing your body.</h1></b>
+      <b><h1 className='text-black  poppins-bold text-neviblur-gradient' style={{ fontWeight: '800px', textAlign: 'center', paddingLeft: '5px', paddingRight: '5px' }} >Take a step towards rebalancing your body.</h1></b>
 
       <div className=''>
         <div style={{ padding: '5px', borderRadius: '10px', textAlign: 'center' }}>
