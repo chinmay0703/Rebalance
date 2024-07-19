@@ -1207,3 +1207,35 @@ body {
 
   transform: translateX(5px);
 }
+
+.custom-carousel-control-prev,
+.custom-carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(6, 143, 255);
+  opacity: 1;
+}
+
+.custom-carousel-control-prev:hover,
+.custom-carousel-control-next:hover {
+  background-color: white;
+}
+
+.custom-carousel-control-prev-icon i,
+.custom-carousel-control-next-icon i {
+  font-size: 20px;
+  /* Adjust the size as needed */
+  color: rgb(120, 132, 220);
+  /* Ensure the color is set */
+}
+
+.text-neviblur-gradient {
+  background: linear-gradient(to right, #4a90e2, #50e3c2, #7ed321); /* Replace with your desired colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
