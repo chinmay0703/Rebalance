@@ -408,8 +408,8 @@ body {
 }
 
 .image-container img {
-  width: 350px;
-  margin: 0 10px 20px;
+  width: 400px;
+  margin: 10px;
 }
 
 .content-container {
@@ -419,8 +419,8 @@ body {
 }
 
 .content-container .text-container {
-  width: 350px;
-  margin: 0 10px;
+  width: 400px;
+  margin: 10px;
 }
 
 .content-container h4 {
@@ -1235,7 +1235,8 @@ body {
 }
 
 .text-neviblur-gradient {
-  background: linear-gradient(to right, #4a90e2, #50e3c2, #7ed321); /* Replace with your desired colors */
+  background: linear-gradient(to right, #4a90e2, #50e3c2, #7ed321);
+  /* Replace with your desired colors */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
