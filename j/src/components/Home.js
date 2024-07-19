@@ -42,7 +42,7 @@ function Home() {
                             className='img-fluid '
                             src={pic}
                             alt="Your_image"
-                            style={{ width: "130px" }}
+                            style={{ width: "150px" }}
                             onClick={scrollToTop}
                         />
                         <button class="navbar-toggler" style={{ border: "none" }} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

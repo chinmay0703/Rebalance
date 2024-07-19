@@ -1,6 +1,8 @@
 import './clinic.css';
 import "./contact.css"
-import pic from "./images/phot.jpg"
+import pi2c from "./images/phot.jpg"
+import pi2c2 from './images/photw.jpg';
+
 import React from 'react';
 const Contact = () => {
 
@@ -8,7 +10,7 @@ const Contact = () => {
 
     <div>
       <footer className="footer-section">
-        <div className="container">
+        <div className="containe" style={{paddingLeft:'40px'}}>
           <div className="footer-cta pt-5 pb-5">
             <div className="row">
 
@@ -39,7 +41,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-             
+
             </div>
           </div>
           <div className="footer-content pt-5 pb-5">
@@ -47,7 +49,7 @@ const Contact = () => {
               <div className="col-xl-6 col-lg-6 mb-50">
                 <div className="footer-widget">
                   <div className="footer-logo">
-                    <a href="index.html"><img src={pic} className="img-fluid" alt="logo" /></a>
+                    <a href="index.html"><img src={pi2c} className="img-fluid" alt="logo" /></a>
                   </div>
                   <div className="footer-text">
                     <p className='text-white'>Welcome to ReBalance physiotherapy clinic - your path to optimal health and wellness. Our state of the art physiotherapy clinic is dedicated to helping you restore, rejuvinate, and reclaim your body's natural balance. We provide personalized treatment plans tailored to your needs. </p>
@@ -78,7 +80,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="copyright-area">
-          <div className="container">
+          <div className="containe">
             <div className="row">
               <div className="col-xl-6 col-lg-6 text-center text-lg-left">
                 <div className="copyright-text text-lg-left">
