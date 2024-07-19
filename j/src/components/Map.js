@@ -27,11 +27,13 @@ const Map = () => {
     window.open('https://maps.app.goo.gl/5NPMoY3nmSbquKcg8'); // Replace 'https://example.com' with your desired URL
   };
   return (
-    <div className={`scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
-      <div style={{ padding: '20px', textAlign: 'center' }} className='colorga ' >
-        <h1 className='text-center colorrr'><b>Get Professional Physiotherapy At Your Doorstep</b></h1><br></br>
-        <h5 className='text-center colo'>With Our Team Of Highly Skilled And Trained Physiotherapists</h5>
-        <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}>  <button className='btn btn-success text-center justify-content-center align-item-center my-2' >Book NOW</button></Link>
+    <div className={`scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef} >
+      <div style={{ marginLeft: '30px', marginRight: '30px', padding: '30px', textAlign: 'center', backgroundColor: '#eee', borderRadius: '30px' }} className='colora'  >
+        <h1 className='text-center  poppins-bold'><b>Get Professional Physiotherapy At Your Doorstep</b></h1><br></br>
+        <h5 className='text-center colo poppins-light'>With Our Team Of Highly Skilled And Trained Physiotherapists</h5>
+        <Link to={"https://www.eka.care/doctor/vaishnavi-tammewar-orthopedic-surgeon-bangalore/calendar"}>
+          <button className='btn btn-success text-center justify-content-center align-item-center my-3' >Book NOW</button>
+        </Link>
       </div>
       <div className='c'>
         <center><h5 className='bu'>CONTACT US</h5></center>

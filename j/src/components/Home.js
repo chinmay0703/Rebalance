@@ -76,7 +76,10 @@ function Home() {
             </header>
             <Clinic />
             <ChatBot />
-            <Advanced />
+            <div className="mx-0" style={{ backgroundColor: '#eee' }}>
+                <Advanced />
+            </div>
+
             <br></br>
             <br></br>
             <br></br>

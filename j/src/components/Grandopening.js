@@ -23,7 +23,7 @@ const SpecialOffer = () => {
       {/* <h1 style={flash}> Grand Opening Special!</h1> */}
       <animated.p > </animated.p>
     </animated.div>
-      <p className='text-center mx-4'>Book your initial consultation now and receive a discount on your first treatment session. Don't miss this opportunity to embark on your path to optimal health and wellness.</p>
+      <h6 className='text-center mx-4' style={{ textAlign: 'justify' }}>Book your initial consultation now and receive a discount on your first treatment session. Don't miss this opportunity to embark on your path to optimal health and wellness.</h6>
       <br></br>
       <Imagecolumn></Imagecolumn>
       <hr></hr>
