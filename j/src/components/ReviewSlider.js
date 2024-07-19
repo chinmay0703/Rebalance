@@ -31,7 +31,7 @@ function ReviewSlider() {
   const images = [pic1, pic2, pic3, pic8, pic9, pic10];
 
   return (
-    <div style={{ backgroundColor: '#eee', paddingTop: '50px', marginLeft: '20px', marginRight: '20px', borderRadius: '30px' }} className={` scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
+    <div style={{ backgroundColor: '#eee', paddingTop: '50px', marginLeft: '30px', marginRight: '30px', borderRadius: '30px' }} className={` scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
       <div style={{ textAlign: 'center' }}>
         <h1 className='text-center  poppins-bold' >What Our Patients Say</h1>
         <h5 className='text-center text-black poppins-light my-3'>Rated 5.0 stars by our customers on Google</h5>
