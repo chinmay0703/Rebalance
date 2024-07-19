@@ -7,6 +7,7 @@ import ChatBot from './ChatBox';
 import Nav from 'react-bootstrap/Nav';
 import pic from './images/photw.jpg';
 import { scroller, animateScroll } from 'react-scroll';
+import { Link } from 'react-router-dom';
 function Gallery() {
 
     const scrollToContact = () => {
@@ -41,19 +42,19 @@ function Gallery() {
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav me-auto mb-lg-0 p-2">
                                     <li class="nav-item">
-                                        <a class="nav-link mx-1" aria-current="page" href="/" onClick={scrollToTop}><h6 class="nav-text" >Home</h6></a>
+                                        <Link class="nav-link mx-1" aria-current="page" to="/" onClick={scrollToTop}><h6 class="nav-text" >Home</h6></Link>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link mx-1" aria-current="page" href="/gallery"><h6 class="nav-text" style={{ color: '#039dfc' }}>Gallery</h6></a>
+                                        <Link class="nav-link mx-1" aria-current="page" to="/gallery"><h6 class="nav-text" style={{ color: '#039dfc' }}>Gallery</h6></Link>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link mx-1" aria-current="page" href="/aboutus" onClick={scrollToTop}><h6 class="nav-text">AboutUs</h6></a>
+                                        <Link class="nav-link mx-1" aria-current="page" to="/aboutus" onClick={scrollToTop}><h6 class="nav-text">AboutUs</h6></Link>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link mx-1" aria-current="page" href="https://maps.app.goo.gl/5NPMoY3nmSbquKcg8"><h6 class="nav-text">Location</h6></a>
+                                        <Link class="nav-link mx-1" aria-current="page" to="https://maps.app.goo.gl/5NPMoY3nmSbquKcg8"><h6 class="nav-text">Location</h6></Link>
                                     </li>
                                     <li class="nav-item" onClick={scrollToContact}>
-                                        <a href="#" class="nav-link mx-1"><h6 class="nav-text">Contact Us</h6></a>
+                                        <Link href="#" class="nav-link mx-1"><h6 class="nav-text">Contact Us</h6></Link>
                                     </li>
                                 </ul>
                             </div>
