@@ -7,59 +7,92 @@ const DropdawnQuestions = () => {
   const componentRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      });
-    });
-    observer.observe(componentRef.current);
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
 
   return (
-    <div>
-      <div className={`scrolling-componentty ${isVisible ? 'visible' : ''}`} ref={componentRef}>
-        <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Why is Physiotherapy important?
-          </Dropdown.Toggle>
-          <Dropdown.Menu className="text-center"> {/* Add text-center class */}
-            <Dropdown.ItemText className="middddddd">Post-surgery rehabilitation, Reduce or eliminate pain, Recover and prevent sports injuries, Pregnancy and post-partum care and Neuro cases rehabilitation.</Dropdown.ItemText>
-          </Dropdown.Menu>
-        </Dropdown>
+    <div >
 
-        <h3> </h3>
-
-        <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            How long does a physiotherapy session last?
-          </Dropdown.Toggle>
-          <Dropdown.Menu className="text-center"> {/* Add text-center class */}
-            <Dropdown.ItemText className="middddddd">The initial session that includes history taking, examination and diagnosis usually takes around 45 minutes. Following that, the physiotherapy sessions can be around 35-45 minutes.</Dropdown.ItemText>
-          </Dropdown.Menu>
-        </Dropdown>
-
-        <h3> </h3>
-
-        <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            How do I schedule an appointment?
-          </Dropdown.Toggle>
-          <Dropdown.Menu className="text-center"> {/* Add text-center class */}
-            <Dropdown.ItemText className="middddddd">You can book an appointment with us by contacting us at +917721099005.</Dropdown.ItemText>
-          </Dropdown.Menu>
-        </Dropdown>
-
-        <br></br>
+      <div className="containe my-5 px-4" >
+        <h1 className="poppins-bold mb-4 text-center">People Also Ask</h1>
+        <div className="row justify-content-center" >
+          <div className="col-lg-12">
+            <div className="accordion accordion-flush"  id="accordionFlushExample">
+              <div className="accordion-item" style={{backgroundColor:"#eee"}}>
+                <h2 className="accordion-header" id="flush-headingOne">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Why is Physiotherapy important?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div className="accordion-body">
+                    Post-surgery rehabilitation, Reduce or eliminate pain, Recover and prevent sports injuries, Pregnancy and post-partum care, and Neuro cases rehabilitation.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item" style={{backgroundColor:"#eee"}}>
+                <h2 className="accordion-header" id="flush-headingTwo">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    How long does a physiotherapy session last?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div className="accordion-body">
+                    The initial session that includes history taking, examination, and diagnosis usually takes around 45 minutes. Following that, the physiotherapy sessions can be around 35-45 minutes.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item" style={{backgroundColor:"#eee"}}>
+                <h2 className="accordion-header" id="flush-headingThree">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    How do I schedule an appointment?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div className="accordion-body">
+                    You can book an appointment with us by contacting us at +917721099005.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-     
+
       <div>
         <ReviewSlider></ReviewSlider>
         {/* <div className='c'>
