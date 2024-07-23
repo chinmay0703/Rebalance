@@ -50,7 +50,7 @@ const DropdawnQuestions = () => {
                     aria-expanded="false"
                     aria-controls="flush-collapseTwo"
                   >
-                    How long does a physiotherapy session last?
+                    Physiotherapy session last for?
                   </button>
                 </h2>
                 <div
