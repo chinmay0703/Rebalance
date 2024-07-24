@@ -10,8 +10,8 @@ const Clinic = () => {
   }
 
   return (
-    <div className='conainer' style={{ padding: '20px', backgroundColor: '#eee' }}>
-      <div className='position-relative rounded' style={{ borderRadius: '30px', overflow: 'hidden',padding:'10px' }}>
+    <div className='conainer' style={{ padding: '20px', backgroundColor: '#eeee' }}>
+      <div className='position-relative rounded' style={{ borderRadius: '30px', overflow: 'hidden', padding: '10px' }}>
         <img
           className='img-fluid'
           src={pic}
