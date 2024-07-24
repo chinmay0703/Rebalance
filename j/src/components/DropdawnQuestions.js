@@ -11,22 +11,25 @@ const DropdawnQuestions = () => {
   return (
     <div >
 
-      <div className="containe my-5 px-4" >
+      <div className="containr my-5 px-4">
         <h1 className="poppins-bold mb-4 text-center">People Also Ask</h1>
-        <div className="row justify-content-center" >
+        <div className="row justify-content-center">
           <div className="col-lg-12">
-            <div className="accordion accordion-flush"  id="accordionFlushExample">
-              <div className="accordion-item" style={{backgroundColor:"#eee"}}>
+            <div className="accordion accordion-flush" id="accordionFlushExample">
+              <div className="accordion-item" style={{ backgroundColor: "#eee" }}>
                 <h2 className="accordion-header" id="flush-headingOne">
                   <button
-                    className="accordion-button collapsed"
+                    className="accordion-button custom-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseOne"
                     aria-expanded="false"
                     aria-controls="flush-collapseOne"
                   >
-                    Why is Physiotherapy important?
+                    <span className="question-text">Why is Physiotherapy important?</span>
+                    <span className="arrow-container">
+                      <i className="arrow-icon"></i>
+                    </span>
                   </button>
                 </h2>
                 <div
@@ -40,17 +43,20 @@ const DropdawnQuestions = () => {
                   </div>
                 </div>
               </div>
-              <div className="accordion-item" style={{backgroundColor:"#eee"}}>
+              <div className="accordion-item" style={{ backgroundColor: "#eee" }}>
                 <h2 className="accordion-header" id="flush-headingTwo">
                   <button
-                    className="accordion-button collapsed"
+                    className="accordion-button custom-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseTwo"
                     aria-expanded="false"
                     aria-controls="flush-collapseTwo"
                   >
-                    Physiotherapy session last for?
+                    <span className="question-text">Physiotherapy session last for?</span>
+                    <span className="arrow-container">
+                      <i className="arrow-icon"></i>
+                    </span>
                   </button>
                 </h2>
                 <div
@@ -64,17 +70,20 @@ const DropdawnQuestions = () => {
                   </div>
                 </div>
               </div>
-              <div className="accordion-item" style={{backgroundColor:"#eee"}}>
+              <div className="accordion-item" style={{ backgroundColor: "#eee" }}>
                 <h2 className="accordion-header" id="flush-headingThree">
                   <button
-                    className="accordion-button collapsed"
+                    className="accordion-button custom-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseThree"
                     aria-expanded="false"
                     aria-controls="flush-collapseThree"
                   >
-                    How do I schedule an appointment?
+                    <span className="question-text">How do I schedule an appointment?</span>
+                    <span className="arrow-container">
+                      <i className="arrow-icon"></i>
+                    </span>
                   </button>
                 </h2>
                 <div
@@ -92,6 +101,44 @@ const DropdawnQuestions = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+  .custom-button::after {
+    display: none !important; /* Hide default arrow */
+  }
+  .accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .question-text {
+    flex: 1;
+    text-align: left;
+  }
+  .arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  .arrow-icon {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .accordion-button.collapsed .arrow-icon {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+`}</style>
+
 
       <div>
         <ReviewSlider></ReviewSlider>

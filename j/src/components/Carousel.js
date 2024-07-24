@@ -10,6 +10,7 @@ import pic6 from "../components/images/close-up-man-rubbing-his-painful-back-iso
 import pic7 from "../components/images/disabled-senior-patient-working-out-home-with-resistance-band-guidance-nurse.jpg";
 import pic8 from "../components/images/doctor-helping-patient-during-rehabilitation.jpg";
 import pic9 from "../components/images/physiotherapist-helping-young-female-patient-her-clinic.jpg";
+import pic10 from "../components/images/group.png";
 
 import { Link } from 'react-router-dom';
 
@@ -56,8 +57,11 @@ const Advanced = () => {
     <div className="" ref={componentRef}>
       <></>
       <div className='uper '>
-        <div style={{ padding: '5px', borderRadius: '10px', textAlign: 'center', backgroundColor: 'white' }} className='colorga mx-4'>
+        <div style={{ padding: '5px', borderRadius: '10px', textAlign: 'center', backgroundColor: 'whit' }} className='coorga mx-4'>
           <h3 className='poppins-semibold text-neviblur-gradient py-2'>Multiple Treatment We Provide</h3>
+          <div class="">
+            <img style={{ width: '250px' }} class="" src={pic10} alt="Classroom Image" />
+          </div>
         </div>
       </div>
       {/* <hr></hr> */}
