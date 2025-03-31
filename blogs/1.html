@@ -1,0 +1,208 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Primary Meta Tags -->
+	<title>Rebalance Physiotherapy Clinic | Expert Physio Care in India</title>
+	<meta name="title" content="Rebalance Physiotherapy Clinic | Expert Physio Care in India">
+	<meta name="description" content="Rebalance Physiotherapy Clinic offers expert care for injury recovery, sports therapy, postural correction & holistic wellness. Explore our blog for guidance on pain relief and physical rehab.">
+	<meta name="keywords" content="physiotherapy, sports injury, rehab, physical therapy, posture correction, pain relief, wellness, manual therapy, physiotherapist India, Rebalance Physiotherapy Clinic">
+	<meta name="author" content="Rebalance Physiotherapy Clinic">
+	<link rel="canonical" href="https://rebalancephysio.in" />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://rebalancephysio.in">
+	<meta property="og:title" content="Rebalance Physiotherapy Clinic | Expert Physio Care in India">
+	<meta property="og:description" content="Injury prevention, physical therapy & recovery tips from top physiotherapists. Visit Rebalance Physiotherapy Clinic to feel your best again.">
+	<meta property="og:image" content="https://rebalancephysio.in/img/logo.jpg"> <!-- replace with actual image -->
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://rebalancephysio.in">
+	<meta name="twitter:title" content="Rebalance Physiotherapy Clinic | Expert Physio Care in India">
+	<meta name="twitter:description" content="Read expert physiotherapy blogs to help with injury prevention, rehab, and wellness.">
+	<meta name="twitter:image" content="https://rebalancephysio.in/img/logo.jpg"> <!-- replace with actual image -->
+	
+	<!-- Favicon -->
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	
+	<link rel="icon" href="img/favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/nice-select.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/icofont.css">
+	<link rel="stylesheet" href="/css/slicknav.min.css">
+	<link rel="stylesheet" href="/css/owl-carousel.css">
+	<link rel="stylesheet" href="/css/datepicker.css">
+	<link rel="stylesheet" href="/css/animate.min.css">
+	<link rel="stylesheet" href="/css/magnific-popup.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+	<div class="preloader">
+		<div class="loader">
+			<div class="loader-outter"></div>
+			<div class="loader-inner"></div>
+			<div class="indicator">
+				<svg width="16px" height="12px">
+					<polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+					<polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+				</svg>
+			</div>
+		</div>
+	</div>
+
+	<header class="header">
+		<div class="header-inner">
+			<div class="container">
+				<div class="inner">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-12">
+							<div class="logo" style="width: 150px;">
+								<a href="/index.html"><img class="img-fluid" src="/img/logo.jpg" alt="Logo"></a>
+							</div>
+							<div class="mobile-nav"></div>
+						</div>
+						<div class="col-lg-7 col-md-9 col-12">
+							<div class="main-menu">
+								<nav class="navigation">
+									<ul class="nav menu">
+										<li><a href="/index.html">Home</a></li>
+										<li><a href="/services.html">Services</a></li>
+										<li class="active"><a>Blogs</a></li>
+										<li><a href="/contact.html">Contact Us</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="col-lg-2 col-12">
+							<div class="get-quote">
+								<a href="https://www.eka.care/doctor/dr-vaishnavi-tammewar-physiotherapist-bangalore" class="btn">Book Appointment</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="breadcrumbs overlay">
+		<div class="container">
+			<div class="bread-inner">
+				<div class="row">
+					<div class="col-12">
+						<h2>Blog Details</h2>
+						<ul class="bread-list">
+							<li><a href="/index.html">Home</a></li>
+							<li><i class="icofont-simple-right"></i></li>
+							<li class="active">Blog Details</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="news-single section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-12">
+					<div id="blog-content"></div>
+				</div>
+				<div class="col-lg-4 col-12">
+					<div class="main-sidebar">
+						<div class="single-widget recent-post">
+							<h3 class="title">Recent post</h3>
+							<div id="recent-posts"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+
+	<!-- Script to Load JSON Content -->
+	<script>
+		fetch('/blog-data.json')
+			.then(response => response.json())
+			.then(data => {
+				const blog = data;
+				const recent = data;
+				// Blog Content
+				const blogContainer = document.getElementById('blog-content');
+				blogContainer.innerHTML = `
+					<div class="single-main">
+						<div class="news-head">
+							<img src="${blog[0].image}" alt="Blog Image">
+						</div>
+						<h1 class="news-title">${blog[0].title}</h1>
+						<p class="news-text">${blog[0].content}</p>
+						<div class="blog-gallery row py-3">
+							${blog[0].gallery.map(image => `
+								<div class="gallery-item col-6">
+									<img src="${image}" alt="Gallery Image">
+								</div>
+							`).join('')}
+						</div>
+						<div class="news-text py-1">
+							<blockquote class="overlay"><p>${blog[0].quote}</p></blockquote>
+						</div>
+						
+						<p>${blog[0].date}</p>
+					</div>
+				`;
+
+				// Recent Posts
+				const recentContainer = document.getElementById('recent-posts');
+				recentContainer.innerHTML = recent.slice(0, 5).map(post => `
+					<div class="single-post">
+						<div class="image style="width: 50px;  height: 50px;">
+							<img style="width: 80px;  height: 80px;" src="${post.image}" alt="Recent">
+						</div>
+						<div class="content">
+							<h5><a href="${post.link1}">${post.title}</a></h5>
+							<ul class="comment">
+								<li><i class="fa fa-calendar"></i> ${post.date}</li>
+							</ul>
+						</div>
+					</div>
+				`).join('');
+			})
+			.catch(err => {
+				console.error('Error loading blog data:', err);
+			});
+	</script>
+
+	<!-- Scripts -->
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery-migrate-3.0.0.js"></script>
+	<script src="/js/jquery-ui.min.js"></script>
+	<script src="/js/easing.js"></script>
+	<script src="/js/colors.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap-datepicker.js"></script>
+	<script src="/js/jquery.nav.js"></script>
+	<script src="/js/slicknav.min.js"></script>
+	<script src="/js/jquery.scrollUp.min.js"></script>
+	<script src="/js/niceselect.js"></script>
+	<script src="/js/tilt.jquery.min.js"></script>
+	<script src="/js/owl-carousel.js"></script>
+	<script src="/js/jquery.counterup.min.js"></script>
+	<script src="/js/steller.js"></script>
+	<script src="/js/wow.min.js"></script>
+	<script src="/js/jquery.magnific-popup.min.js"></script>
+	<script src="/https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/main.js"></script>
+</body>
+</html>
