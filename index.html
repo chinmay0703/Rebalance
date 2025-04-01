@@ -775,12 +775,16 @@
 				  .then(response => response.json())
 				  .then(data => {
 					const blogList = document.getElementById('blog-list');
+			  
+					// ✅ Reverse the data to show latest blogs first
+					const reversedData = data.reverse();
+			  
 					// Determine items per slide: 1 for screens smaller than 768px, otherwise 2
 					const itemsPerSlide = window.innerWidth < 768 ? 1 : 2;
-					
+			  
 					// Group blog items into slides
-					for (let i = 0; i < data.length; i += itemsPerSlide) {
-					  let slideItems = data.slice(i, i + itemsPerSlide);
+					for (let i = 0; i < reversedData.length; i += itemsPerSlide) {
+					  let slideItems = reversedData.slice(i, i + itemsPerSlide);
 					  let activeClass = i === 0 ? ' active' : '';
 					  let slideItemHtml = `<div class="carousel-item${activeClass}">
 						<div class="row">
@@ -789,7 +793,7 @@
 						  <!-- Central column for blog items -->
 						  <div class="col-12 col-lg-8">
 							<div class="row">`;
-					  
+			  
 					  slideItems.forEach(blog => {
 						slideItemHtml += `
 						  <div class="col-lg-6 col-md-6 col-12 p-4">
@@ -802,7 +806,7 @@
 							  <div class="news-body">
 								<div class="news-content">
 								  <div class="date">${blog.date}</div>
-								  <h2><a href="${blog.link}">${blog.title.slice(0, 45)+"..."}</a></h2>
+								  <h2><a href="${blog.link}">${blog.title.slice(0, 45) + "..."}</a></h2>
 								  <p class="text">${blog.description}</p>
 								</div>
 							  </div>
@@ -812,17 +816,20 @@
 						  </div>
 						`;
 					  });
+			  
 					  slideItemHtml += `</div>
 						  </div>
 						  <!-- Right empty column (visible on large screens) -->
 						  <div class="d-none d-lg-block col-lg-2"></div>
 						</div>
 					  </div>`;
+			  
 					  blogList.innerHTML += slideItemHtml;
 					}
 				  })
 				  .catch(error => console.error('Error loading blog data:', error));
 			  </script>
+			  
 			</div>
 		  </section>
 		  

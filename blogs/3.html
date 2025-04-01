@@ -231,6 +231,20 @@
 
 	<!-- Script to Load JSON Content -->
 	<script>
+
+        const path = window.location.pathname;
+        let adjustedNum = 0;
+        const match = path.match(/(\d+)\.html/);
+        const blogNumber = 0;
+        if (match) {
+        const currentNum = parseInt(match[1], 10); 
+        adjustedNum = currentNum - 1;        
+        console.log("Number - 1:", adjustedNum);
+        } else {
+        console.log("No valid number found in the URL.");
+        }
+
+
 		fetch('/blog-data.json')
 			.then(response => response.json())
 			.then(data => {
@@ -241,22 +255,22 @@
 				blogContainer.innerHTML = `
 					<div class="single-main">
 						<div class="news-head" >
-							<img src="${blog[2].image}"  alt="Blog Image">
+							<img src="${blog[adjustedNum].image}"  alt="Blog Image">
 						</div>
-						<h1 class="news-title">${blog[2].title}</h1>
-						<p class="news-text">${blog[2].content}</p>
+						<h1 class="news-title">${blog[adjustedNum].title}</h1>
+						<p class="news-text">${blog[adjustedNum].content}</p>
 						<div class="blog-gallery row py-3">
-							${blog[2].gallery.map(image => `
+							${blog[adjustedNum].gallery.map(image => `
 								<div class="gallery-item col-6">
 									<img src="${image}" alt="Gallery Image">
 								</div>
 							`).join('')}
 						</div>
 						<div class="news-text py-1">
-							<blockquote class="overlay"><p>${blog[2].quote}</p></blockquote>
+							<blockquote class="overlay"><p>${blog[adjustedNum].quote}</p></blockquote>
 						</div>
 						
-						<p>${blog[2].date}</p>
+						<p>${blog[adjustedNum].date}</p>
 					</div>
 				`;
 
@@ -268,7 +282,7 @@
 							<img src="${post.image}" alt="Recent">
 						</div>
 						<div class="content">
-							<h5><a href="#">${post.title}</a></h5>
+							<h5><a  href="${post.link1}">${post.title}</a></h5>
 							<ul class="comment">
 								<li><i class="fa fa-calendar"></i> ${post.date}</li>
 							</ul>

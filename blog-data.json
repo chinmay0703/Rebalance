@@ -82,7 +82,7 @@
     "image": "https://cdn.pixabay.com/photo/2017/11/18/05/02/yoga-2959226_1280.jpg",
     "date": "12 Feb, 2020",
     "title": "Stretch Daily to Build Flexibility & Strength",
-    "description": "Discover how daily stretching routines can enhance flexibility, prevent injuries.",
+    "description": "Discover how daily stretching routines can enhance flexibility, prevent injuries.and improve overall wellness.",
     "link": "blogs/6.html",
     "link1": "/blogs/6.html",
     "keywords": "daily stretching, flexibility exercises, injury prevention, physiotherapy tips, muscle recovery, stretching routine, mobility improvement, physiotherapy near me",
@@ -92,5 +92,35 @@
       "https://cdn.pixabay.com/photo/2017/07/04/13/54/yoga-2471181_1280.jpg",
       "https://cdn.pixabay.com/photo/2014/09/28/19/50/fitness-465205_1280.jpg"
     ]
-  }  
+  },
+  {
+    "image": "https://cdn.pixabay.com/photo/2023/10/04/14/15/man-8293794_1280.jpg",
+    "date": "25 Mar, 2025",
+    "title": "Morning Stretches to Boost Energy & Focus",
+    "description": "Learn how morning stretches can energize your day, improve posture and mental clarity.",
+    "link": "blogs/7.html",
+    "link1": "/blogs/7.html",
+    "keywords": "morning stretches, energy boost, focus improvement, daily routine, wellness tips, posture correction, flexibility exercises, physiotherapy advice",
+    "content": "Starting your day with simple stretches can set a positive tone and prepare your body for daily challenges. Morning stretching helps increase blood flow, reduce stiffness, and sharpen mental clarity. It’s an excellent way to wake up both body and mind. Incorporate movements like spinal twists, forward folds, and shoulder rolls to enhance posture and mobility. Experts in physiotherapy stress the importance of gentle, consistent movement to maintain overall well-being.",
+    "quote": "‘Wake up with determination, stretch with purpose.’",
+    "gallery": [
+      "https://cdn.pixabay.com/photo/2016/11/14/03/06/woman-1822459_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/06/12/52/woman-2592247_1280.jpg"
+    ]
+  },
+  {
+    "image": "https://cdn.pixabay.com/photo/2017/04/22/10/15/woman-2250970_1280.jpg",
+    "date": "01 Apr, 2025",
+    "title": "Improve Posture with Simple Daily Stretches",
+    "description": "Boost your posture and spinal health with easy daily stretch routines recommended by experts.",
+    "link": "blogs/8.html",
+    "link1": "/blogs/8.html",
+    "keywords": "posture improvement, daily stretching, back pain relief, spinal health, flexibility training, physiotherapy tips, neck pain exercises, mobility routine",
+    "content": "Poor posture is a common issue in today’s screen-heavy lifestyle, often leading to back and neck pain. Fortunately, incorporating posture-focused stretches into your daily routine can realign your spine and relieve muscle tension. Stretching the chest, shoulders, and hip flexors counteracts the effects of slouching. Physiotherapists suggest consistency and mindful breathing during each stretch to enhance results. With just 10 minutes a day, you can stand taller and feel better.",
+    "quote": "‘Good posture is the foundation of strength.’",
+    "gallery": [
+      "https://cdn.pixabay.com/photo/2019/12/31/16/06/yoga-4732209_1280.jpg",
+      "https://cdn.pixabay.com/photo/2021/05/14/08/44/running-6252827_1280.jpg"
+    ]
+  }
 ]
