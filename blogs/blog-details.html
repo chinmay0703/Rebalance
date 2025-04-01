@@ -275,7 +275,7 @@
     
                 // ✅ Recent Posts
                 const recentContainer = document.getElementById('recent-posts');
-                recentContainer.innerHTML = recent.reverse().slice(0, 5).map(post => `
+                recentContainer.innerHTML = recent.reverse().slice(1, 5).map(post => `
                     <div class="single-post" style="margin-bottom: 20px;">
                         <div class="image">
                             <img style="border-radius: 10px; width: 80px; height: 80px; overflow: hidden" src="${post.image}" alt="Recent">
