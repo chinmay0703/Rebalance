@@ -229,71 +229,72 @@
 		</div>
 	</section>
 
-	<!-- Script to Load JSON Content -->
-	<script>
-
-        const path = window.location.pathname;
-        let adjustedNum = 0;
-        const match = path.match(/(\d+)\.html/);
-        const blogNumber = 0;
-        if (match) {
-        const currentNum = parseInt(match[1], 10); 
-        adjustedNum = currentNum - 1;        
-        console.log("Number - 1:", adjustedNum);
-        } else {
-        console.log("No valid number found in the URL.");
+    <script>
+        // ✅ Get the `id` from the URL like ?id=1
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
         }
-
-
-		fetch('/blog-data.json')
-			.then(response => response.json())
-			.then(data => {
-				const blog = data;
-				const recent = data;
-				// Blog Content
-				const blogContainer = document.getElementById('blog-content');
-				blogContainer.innerHTML = `
-					<div class="single-main">
-						<div class="news-head" >
-							<img src="${blog[adjustedNum].image}"  alt="Blog Image">
-						</div>
-						<h1 class="news-title">${blog[adjustedNum].title}</h1>
-						<p class="news-text">${blog[adjustedNum].content}</p>
-						<div class="blog-gallery row py-3">
-							${blog[adjustedNum].gallery.map(image => `
-								<div class="gallery-item col-6">
-									<img src="${image}" alt="Gallery Image">
-								</div>
-							`).join('')}
-						</div>
-						<div class="news-text py-1">
-							<blockquote class="overlay"><p>${blog[adjustedNum].quote}</p></blockquote>
-						</div>
-						
-						<p>${blog[adjustedNum].date}</p>
-					</div>
-				`;
-
-				// Recent Posts
-				const recentContainer = document.getElementById('recent-posts');
-				recentContainer.innerHTML = recent.slice(0, 5).map(post => `
-					<div class="single-post" style="margin-bottom: 20px;">
-						<div class="image">
-							<img style="border-radius: 10px; width: 80px height: 80px; overflow: hidden" src="${post.image}" alt="Recent">
-						</div>
-						<div class="content">
-							<h5><a href="${post.link1}">${post.title}</a></h5>
-							<ul class="comment">
-								<li><i class="fa fa-calendar"></i> ${post.date}</li>
-							</ul>
-						</div>
-					</div>
-				`).join('');
-			})
-			.catch(err => {
-				console.error('Error loading blog data:', err);
-			});
-	</script>
+    
+        const blogId = parseInt(getQueryParam('id'), 10); // e.g. id=3
+        const adjustedNum = blogId ? blogId - 1 : 0; // default to first if invalid
+    
+        fetch('/blog-data.json')
+            .then(response => response.json())
+            .then(data => {
+                const blog = data;
+                const recent = [...data]; // Copy for recent posts display
+    
+                if (!blog[adjustedNum]) {
+                    document.getElementById('blog-content').innerHTML = '<p>Blog post not found.</p>';
+                    return;
+                }
+    
+                // ✅ Blog Content
+                const blogContainer = document.getElementById('blog-content');
+                blogContainer.innerHTML = `
+                    <div class="single-main">
+                        <div class="news-head">
+                            <img src="${blog[adjustedNum].image}" alt="Blog Image">
+                        </div>
+                        <h1 class="news-title">${blog[adjustedNum].title}</h1>
+                        <p class="news-text">${blog[adjustedNum].content}</p>
+                        <div class="blog-gallery row py-3">
+                            ${blog[adjustedNum].gallery.map(image => `
+                                <div class="gallery-item col-6">
+                                    <img src="${image}" alt="Gallery Image">
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="news-text py-1">
+                            <blockquote class="overlay"><p>${blog[adjustedNum].quote}</p></blockquote>
+                        </div>
+                        <p><strong>${blog[adjustedNum].date}</strong></p>
+                    </div>
+                `;
+    
+                // ✅ Recent Posts
+                const recentContainer = document.getElementById('recent-posts');
+                recentContainer.innerHTML = recent.reverse().slice(0, 5).map(post => `
+                    <div class="single-post" style="margin-bottom: 20px;">
+                        <div class="image">
+                            <img style="border-radius: 10px; width: 80px; height: 80px; overflow: hidden" src="${post.image}" alt="Recent">
+                        </div>
+                        <div class="content">
+                            <h5><a href="${post.link1}">${post.title}</a></h5>
+                            <ul class="comment">
+                                <li><i class="fa fa-calendar"></i> ${post.date}</li>
+                            </ul>
+                        </div>
+                    </div>
+                `).join('');
+            })
+            .catch(err => {
+                console.error('Error loading blog data:', err);
+                document.getElementById('blog-content').innerHTML = '<p>Error loading blog post.</p>';
+            });
+    </script>
+    
 
 	<!-- Scripts -->
 	<script src="/js/jquery.min.js"></script>
