@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rebalance Physiotherapy Clinic offers expert treatment for neck pain, back pain, injury recovery, and rehabilitation services in Whitefield, Bangalore.">
-  <meta name="keywords" content="Physiotherapy, Whitefield, Neck Pain, Back Pain, Injury Recovery, Manual Therapy, Electrotherapy, Cupping, Dry Needling, Physiotherapy Clinic, Bangalore">
+  <meta name="description" id="meta-description" content="Rebalance Physiotherapy Clinic offers expert treatment for neck pain, back pain, injury recovery, and rehabilitation services in Whitefield, Bangalore.">
+  <meta name="keywords" id="meta-keywords" content="Physiotherapy, Whitefield, Neck Pain, Back Pain, Injury Recovery, Manual Therapy, Electrotherapy, Cupping, Dry Needling, Physiotherapy Clinic, Bangalore">
   <meta name="author" content="Rebalance Physiotherapy Clinic">
-  <title>Best Physiotherapy Clinic in Whitefield, Bangalore | Rebalance </title>
+  <meta property="og:image" id="og-image" content="https://www.rebalancephysio.in/landingPage.png">
+  <title id="dynamic-title">Best Physiotherapy Clinic in Whitefield, Bangalore | Rebalance</title>
 
-  <!-- Structured Data (JSON-LD) for LocalBusiness -->
-  <script type="application/ld+json">
+  <script type="application/ld+json" id="dynamic-jsonld">
   {
     "@context": "http://schema.org",
     "@type": "Physiotherapy",
@@ -43,42 +43,26 @@
       "latitude": "12.9716",
       "longitude": "77.7321"
     },
-    "description": "Rebalance Physiotherapy Clinic provides expert treatment for neck pain, back pain, injury recovery, and rehabilitation services in Whitefield, Bangalore. Offering services like manual therapy, electrotherapy, cupping, dry needling, and access to all the necessary machinery. First consultation is free."
+    "description": "Rebalance Physiotherapy Clinic provides expert treatment for neck pain, back pain, injury recovery, and rehabilitation services in Whitefield, Bangalore."
   }
   </script>
-	
-	<!-- Favicon -->
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	
-	<link rel="icon" href="img/favicon.png">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/nice-select.css">
-	<link rel="stylesheet" href="/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/css/icofont.css">
-	<link rel="stylesheet" href="/css/slicknav.min.css">
-	<link rel="stylesheet" href="/css/owl-carousel.css">
-	<link rel="stylesheet" href="/css/datepicker.css">
-	<link rel="stylesheet" href="/css/animate.min.css">
-	<link rel="stylesheet" href="/css/magnific-popup.css">
-	<link rel="stylesheet" href="/css/normalize.css">
-	<link rel="stylesheet" href="/style.css">
-	<link rel="stylesheet" href="/css/responsive.css">
+
+  <link rel="icon" href="/img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/nice-select.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/icofont.css">
+  <link rel="stylesheet" href="/css/slicknav.min.css">
+  <link rel="stylesheet" href="/css/owl-carousel.css">
+  <link rel="stylesheet" href="/css/datepicker.css">
+  <link rel="stylesheet" href="/css/animate.min.css">
+  <link rel="stylesheet" href="/css/magnific-popup.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
 </head>
 <body>
-
-	<div class="preloader">
-		<div class="loader">
-			<div class="loader-outter"></div>
-			<div class="loader-inner"></div>
-			<div class="indicator">
-				<svg width="16px" height="12px">
-					<polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-					<polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-				</svg>
-			</div>
-		</div>
-	</div>
 
 	<header class="header">
 		<div class="header-inner">
@@ -89,7 +73,6 @@
 							<div class="logo" style="width: 150px;">
 								<a href="/index.html"><img class="img-fluid" src="/img/logo.jpg" alt="Logo"></a>
 							</div>
-							<div class="mobile-nav"></div>
 						</div>
 						<div class="col-lg-7 col-md-9 col-12">
 							<div class="main-menu">
@@ -150,27 +133,54 @@
 	</section>
 
     <script>
-        // ✅ Get the `id` from the URL like ?id=1
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
         }
     
-        const blogId = parseInt(getQueryParam('id'), 10); // e.g. id=3
-        const adjustedNum = blogId ? blogId - 1 : 0; // default to first if invalid
+        const blogId = parseInt(getQueryParam('id'), 10);
+        const adjustedNum = blogId ? blogId - 1 : 0;
     
         fetch('/blog-data.json')
             .then(response => response.json())
             .then(data => {
                 const blog = data;
-                const recent = [...data]; // Copy for recent posts display
+                const recent = [...data];
     
                 if (!blog[adjustedNum]) {
                     document.getElementById('blog-content').innerHTML = '<p>Blog post not found.</p>';
                     return;
                 }
     
-                // ✅ Blog Content
+                // Dynamically set the title
+                document.getElementById('dynamic-title').innerText = `${blog[adjustedNum].title} | Rebalance Physiotherapy Clinic`;
+    
+                // Dynamically set JSON-LD data
+                const jsonLdData = {
+                    "@context": "http://schema.org",
+                    "@type": "BlogPosting",
+                    "headline": blog[adjustedNum].title,
+                    "author": {
+                        "@type": "Person",
+                        "name": "Rebalance Physiotherapy Clinic"
+                    },
+                    "datePublished": blog[adjustedNum].date,
+                    "dateModified": blog[adjustedNum].date,  // Add dateModified for better SEO
+                    "description": blog[adjustedNum].excerpt,
+                    "image": blog[adjustedNum].image,
+                    "url": window.location.href,
+                    "mainEntityOfPage": window.location.href,
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Rebalance Physiotherapy Clinic",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "/img/logo.jpg"
+                        }
+                    }
+                };
+                document.getElementById('dynamic-jsonld').innerText = JSON.stringify(jsonLdData);
+    
                 const blogContainer = document.getElementById('blog-content');
                 blogContainer.innerHTML = `
                     <div class="single-main">
@@ -193,7 +203,6 @@
                     </div>
                 `;
     
-                // ✅ Recent Posts
                 const recentContainer = document.getElementById('recent-posts');
                 recentContainer.innerHTML = recent.reverse().slice(1, 5).map(post => `
                     <div class="single-post" style="margin-bottom: 20px;">
@@ -214,9 +223,7 @@
                 document.getElementById('blog-content').innerHTML = '<p>Error loading blog post.</p>';
             });
     </script>
-    
 
-	<!-- Scripts -->
 	<script src="/js/jquery.min.js"></script>
 	<script src="/js/jquery-migrate-3.0.0.js"></script>
 	<script src="/js/jquery-ui.min.js"></script>
