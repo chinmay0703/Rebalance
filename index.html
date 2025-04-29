@@ -628,6 +628,7 @@
 			  
 					  slideItems.forEach(blog => {
 						slideItemHtml += `
+						<a href="${blog.link}">
 						  <div class="col-lg-6 col-md-6 col-12 p-3">
 							<!-- Single Blog with custom card styling -->
 							<a href="${blog.link}">
@@ -646,6 +647,7 @@
 							</a>
 							<!-- End Single Blog -->
 						  </div>
+						</a>
 						`;
 					  });
 			  

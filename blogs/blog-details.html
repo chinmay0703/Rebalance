@@ -212,7 +212,15 @@
                             <img src="${blog[adjustedNum].image}" alt="Blog Image">
                         </div>
                         <h1 class="news-title">${blog[adjustedNum].title}</h1>
-                        <p class="news-text">${blog[adjustedNum].content}</p>
+                       <div class="news-text">
+                            <ul class="list-unstyled">
+                                ${Array.isArray(blog[adjustedNum].content) ? blog[adjustedNum].content.map(paragraph => `
+                                    <li class="mb-2">
+                                        <i class="bi bi-check-circle"></i> ${paragraph.trim()}
+                                    </li>
+                                `).join('') : `<p>${blog[adjustedNum].content}</p>`}
+                            </ul>
+                        </div>
                         <div class="blog-gallery row py-3">
                             ${blog[adjustedNum].gallery.map(image => `
                                 <div class="gallery-item col-6">
