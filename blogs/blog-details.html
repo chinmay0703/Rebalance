@@ -174,9 +174,15 @@
     
                 // Dynamically set the title
                 document.getElementById('dynamic-title').innerText = `${blog[adjustedNum].title} | Rebalance Physiotherapy Clinic`;
-                console.log(blog[adjustedNum].date);
-                const datePublished = parseDate(blog[adjustedNum].date);
-                console.log(datePublished); // Check if this is a valid Date object
+               
+                if (blog[adjustedNum].keywords) {
+                    const metaKeywords = document.getElementById('meta-keywords');
+                    console.log("Keywords found: ", blog[adjustedNum].keywords); // Check keywords in the console
+                    metaKeywords.setAttribute('content', blog[adjustedNum].keywords);
+                } else {
+                    console.log("No keywords found for this blog post."); // Log if no keywords are available
+                }
+
 
                 // Dynamically set JSON-LD data
                 const jsonLdData = {
